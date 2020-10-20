@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CargarCvComponent } from './cargar-cv/cargar-cv.component';
+import { ConfiguracionComponent } from './configuracion/configuracion.component';
 import { AgregarEmpleoComponent } from './empleo/agregar-empleo/agregar-empleo.component';
 import { EditarEmpleoComponent } from './empleo/editar-empleo/editar-empleo.component';
 import { ListarEmpleoComponent } from './empleo/listar-empleo/listar-empleo.component';
@@ -65,7 +66,7 @@ const routes: Routes = [
       },
       {
         path: "configuraciones",
-        component: AgregarEmpleoComponent
+        component: ConfiguracionComponent
       }
     ] 
   }

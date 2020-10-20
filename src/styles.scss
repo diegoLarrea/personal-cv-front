@@ -1,12 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @import "node_modules/bootstrap/scss/bootstrap";
-@import 'src/assets/bootstrap/_variables';
-@import 'src/assets/bootstrap/_bootswatch';
 
 a {
     cursor: pointer !important;
 }
 
-h1, h2, h3, h4, h5, h6, a {
+h1, h2, h3, h4, h5, h6, a, label {
     font-family: 'Quicksand', sans-serif;
+}
+
+.justify {
+    text-align: justify;
+    text-justify: inter-word;
 }
