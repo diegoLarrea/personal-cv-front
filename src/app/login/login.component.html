@@ -1,1 +1,38 @@
-<p>login works!</p>
+<div class="row min-vh-100 bg-primary mx-0">
+    <div class="col-10 col-md-6 col-lg-4 offset-1 offset-md-3 offset-lg-4 my-auto">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-center mb-4">
+                            <img src="assets/img/personal-rosado.png" style="width:110px;height:auto;">
+                        </div>
+                    </div>
+                    <div class="col-10 offset-1">
+                        <label for="">Correo Electrónico</label>
+                        <div class="input-group mb-3">
+                            <input [(ngModel)]="usuario" type="text" class="form-control" placeholder="Ingrese correo...">
+                        </div>
+                    </div>
+                    <div class="col-10 offset-1">
+                        <label for="">Contraseña</label>
+                        <div class="input-group mb-4">
+                            <input (keyup.enter)="login()" [(ngModel)]="pass" type="password" class="form-control" placeholder="Ingrese contraseña...">
+                        </div>
+                    </div>
+                    <div class="col-10 offset-1 mb-4">
+                        <button (click)="login()" type="button" class="btn btn-primary btn-block btn-sm">INGRESAR</button>
+                    </div>
+                    <div class="col-10 offset-1 mb-3">
+                        <div class="text-center">
+                            <a class="text-info">Olvidé la contraseña</a>
+                        </div>
+                        <div class="text-center text-black-50">
+                            ¿Aún no tienes una cuenta? <a class="text-info">Registrarse</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

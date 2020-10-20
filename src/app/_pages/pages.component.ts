@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Empleo } from 'src/_models/empleo';
+import { AuthService } from 'src/_services/auth';
+import { EmpleoService } from 'src/_services/empleo.service';
 declare var $: any;
 @Component({
   selector: 'app-pages',
@@ -7,10 +10,12 @@ declare var $: any;
 })
 export class PagesComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  user = null;
+  constructor(private apiAuth: AuthService) {
+    this.user = apiAuth.getUser();
   }
+
+  ngOnInit(): void { }
 
   f1() {
     $('#sidebar').removeClass('active');
@@ -23,4 +28,10 @@ export class PagesComponent implements OnInit {
     $('.collapse.in').toggleClass('in');
     $('a[aria-expanded=true]').attr('aria-expanded', 'false');
   }
+
+  logOut(){
+    this.apiAuth.logout();
+    this.user = null;
+  }
+  
 }

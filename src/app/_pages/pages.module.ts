@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { FormsModule } from '@angular/forms';
 
 import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
@@ -15,10 +17,12 @@ import { EditarEmpleoComponent } from './empleo/editar-empleo/editar-empleo.comp
 import { EditarUsuarioComponent } from './usuario/editar-usuario/editar-usuario.component';
 import { AgregarUsuarioComponent } from './usuario/agregar-usuario/agregar-usuario.component';
 import { ConfiguracionComponent } from './configuracion/configuracion.component';
+import { HomePipe } from './home/home.pipe';
 
 
 @NgModule({
-  declarations: [PagesComponent,
+  declarations: [
+    PagesComponent,
     HomeComponent,
     CargarCvComponent,
     PostulacionComponent,
@@ -34,7 +38,12 @@ import { ConfiguracionComponent } from './configuracion/configuracion.component'
 
   imports: [
     CommonModule,
+    NgxPaginationModule,
+    FormsModule,
     PagesRoutingModule
+  ],
+  providers: [
+    HomePipe
   ]
 })
 export class PagesModule { }

@@ -1,4 +1,9 @@
+import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Empleo } from 'src/_models/empleo';
+import { EmpleoService } from 'src/_services/empleo.service';
+import Hashids from 'hashids';
+import { HomePipe } from './home.pipe';
 
 @Component({
   selector: 'app-home',
@@ -7,10 +12,42 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiEmpleo: EmpleoService, private dp: DatePipe, private hp: HomePipe) { }
+
+  empleos: Empleo [] = [];
+  empleosCopy: Empleo [] = [];
+  searchText = null;
+  hashids = new Hashids('personal-cv', 5);
+  p: number = 1;
 
   ngOnInit(): void {
+    this.getEmpleos();
   }
 
   mensaje = "Somos el servicio de telefonía móvil PERSONAL ofrecido en Paraguay por la empresa Núcleo S.A. operativa desde el 24 de junio de 1998. Te invitamos a que formes parte de este gran equipo de profesionales así, juntos, seguimos creciendo. Juntos hacemos +"
+
+  getEmpleos(){
+    this.apiEmpleo.getEmpleosHome().subscribe(
+      data => {
+        this.empleos = data;
+        this.empleosCopy = [...this.empleos];
+        this.empleos.forEach(el => {
+          el.fecha_creacion = this.dp.transform(el.fecha_creacion, 'dd/MM/yyyy HH:mm:ss');
+          el.id = this.hashids.encode(el.id);
+        })
+        console.log(this.empleos);
+      }
+    )
+  }
+
+  buscar(){
+    if(this.searchText != null && this.searchText != ""){
+      this.empleos = this.hp.transform(this.empleos, this.searchText);
+    }
+  }
+
+  limpiar(){
+    this.empleos = [...this.empleosCopy];
+    this.searchText = null;
+  }
 }

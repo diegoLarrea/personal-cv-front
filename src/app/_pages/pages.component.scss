@@ -11,7 +11,7 @@
     left: -250px;
     height: 100vh;
     z-index: 999;
-    background: #00BBF9;
+    background: #fff;
     color: #fff;
     transition: all 0.3s;
     overflow-y: auto;
@@ -76,24 +76,24 @@
 #sidebar ul li a {
     padding: 10px;
     font-size: 1.1em;
-    color: white;
+    color: #00BBF9;
     display: block;
 }
 
 #sidebar ul li a:hover {
-    color: #00BBF9;
-    background: #fff;
+    color: #fff;
+    background: #00BBF9;
     text-decoration: none;
 }
 
 #sidebar ul li a:hover i {
-    color: #00BBF9;
+    color: #fff;
 }
 
 #sidebar ul li.active>a,
 #sidebar a[aria-expanded="true"] {
-    color: #fff;
-    background: #00BBF9;
+    color: #00BBF9;
+    background: fff;
 }
 
 #sidebar a[data-toggle="collapse"] {
@@ -111,7 +111,7 @@
 #sidebar ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #00BBF9;
+    background: #fff;
 }
 
 ul.CTAs {
