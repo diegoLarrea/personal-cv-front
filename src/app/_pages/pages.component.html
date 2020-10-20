@@ -1,38 +1,76 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+<div class="wrapper">
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div (click)="f1()" id="dismiss">
+            <i class="fas fa-arrow-left"></i>
+        </div>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <div class="sidebar-header">
+            <img src="assets/img/personal-blanco.png" style="width: 110px;height: auto;">
+        </div>
+
+        <ul class="list-unstyled components">
+            <li>
+                <a (click)="f1()" routerLink="/home"><i class="fas fa-home mr-2"></i>Pág. Principal</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+            <li>
+                <a (click)="f1()" routerLink="/curriculum"><i class="fas fa-user-tie mr-2"></i>Currículum</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
+            <li>
+                <a (click)="f1()" routerLink="/postulaciones"><i class="fas fa-star mr-2"></i>Postulaciones</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <li>
+                <a href="#admin-menu" data-toggle="collapse" aria-expanded="false"><i class="fas fa-user-cog mr-2"></i>Administración</a>
+                <ul class="collapse list-unstyled" id="admin-menu">
+                    <li>
+                        <a (click)="f1()" routerLink="/procesos"><i class="fas fa-clipboard-list mr-2"></i>Procesos</a>
+                    </li>
+                    <li>
+                        <a (click)="f1()" routerLink="/empleos"><i class="fas fa-briefcase mr-2"></i>Empleos</a>
+                    </li>
+                    <li>
+                        <a (click)="f1()" routerLink="/usuarios"><i class="fas fa-users mr-2"></i>Usuarios</a>
+                    </li>
+                    <li>
+                        <a (click)="f1()" routerLink="/configuraciones"><i class="fas fa-cogs mr-2"></i>Configuraciones</a>
+                    </li>
+                </ul>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+
+        <nav class="navbar navbar-dark navbar-expand-md bg-primary">
+            <div class="navbar-brand">
+                <a (click)="f2()"><i class="fas fa-bars text-white mr-4"></i></a>
+                <img src="assets/img/personal-blanco.png" style="width: 110px;height: auto;">
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a routerLink="/login" class="nav-link text-white" href="#">Iniciar Sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/register" class="nav-link text-white" href="#">Registrarse</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user-circle fa-lg text-white"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Perfil</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Cerrar Sesión</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <router-outlet></router-outlet>
     </div>
-</nav>
-<router-outlet></router-outlet>
+</div>
+
+<div (click)="f1()" class="overlay"></div>
