@@ -14,16 +14,19 @@ export class LoginComponent implements OnInit {
 
   usuario = null;
   pass = null;
+  loading = false;
 
   ngOnInit(): void {
   }
 
   login(){
     if(this.usuario != null && this.pass != null){
+      this.loading = true;
       this.apiAuth.login(this.usuario, this.pass).subscribe(
         data => {
           localStorage.setItem('token', data.access);
           this.router.navigate([""]);
+          this.loading = false;
         },
         error => {
           this.toast.info("Usuario y/o contraseña incorrecto/s");

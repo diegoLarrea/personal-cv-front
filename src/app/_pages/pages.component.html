@@ -1,12 +1,15 @@
 <div class="wrapper">
     <!-- Sidebar  -->
     <nav id="sidebar">
-        <div (click)="f1()" id="dismiss">
+        <!-- <div (click)="f1()" id="dismiss">
             <i class="fas fa-arrow-left"></i>
-        </div>
+        </div> -->
 
-        <div class="sidebar-header shadow-sm">
-            <img src="assets/img/personal-blanco.png" style="width: 110px;height: auto;">
+        <div class="sidebar-header shadow-sm by-primary">
+            <div class="text-center">
+                <img src="assets/img/personal-rosado.png" style="width: 110px;height: auto;">
+                <p class="text-primary font-weight-bolder mb-0 q">Portal de empleos</p>
+            </div>
         </div>
 
         <ul class="list-unstyled components">
@@ -20,7 +23,7 @@
                 <a (click)="f1()" routerLink="/postulaciones"><i class="fas fa-star mr-2"></i>Postulaciones</a>
             </li>
             <li>
-                <a href="#admin-menu" data-toggle="collapse" aria-expanded="false"><i class="fas fa-user-cog mr-2"></i>Administración</a>
+                <a href="#admin-menu" data-toggle="collapse" aria-expanded="false">Administración <i class="fas fa-sort-down float-right mr-2"></i></a>
                 <ul class="collapse list-unstyled" id="admin-menu">
                     <li>
                         <a (click)="f1()" routerLink="/procesos"><i class="fas fa-clipboard-list mr-2"></i>Procesos</a>
@@ -37,6 +40,11 @@
                 </ul>
             </li>
         </ul>
+        <div class="mt-3">
+            <div (click)="f1()" id="dismiss" class="shadow">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+        </div>
     </nav>
 
     <!-- Page Content  -->

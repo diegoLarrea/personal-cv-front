@@ -17,19 +17,24 @@ export class AuthService {
     }
 
     public getUser(): Object {
-        let token = localStorage.getItem('token');
-        
-        let decodedToken = this.jwtHelper.decodeToken(token);
 
-        if(!decodedToken){
+        if(this.isAuthenticated()){
+            let token = localStorage.getItem('token');
+        
+            let decodedToken = this.jwtHelper.decodeToken(token);
+    
+            if(!decodedToken){
+                return null;
+            }
+    
+            return {
+                nombre: decodedToken.nombre,
+                apellido: decodedToken.apellido,
+                email: decodedToken.email
+            };
+        }else{
             return null;
         }
-
-        return {
-            nombre: decodedToken.nombre,
-            apellido: decodedToken.apellido,
-            email: decodedToken.email
-        };
     }
     
     login(usuario, pass):Observable<any>{    

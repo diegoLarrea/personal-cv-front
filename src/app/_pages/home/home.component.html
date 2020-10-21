@@ -35,9 +35,9 @@
         <div class="col-12 col-md-8">
             <div class="row">
                 <div class="col-12">
-                    <h3 class="text-info mt-4 mt-md-0 text-center text-md-left">Lista de empleos disponibles</h3>
+                    <h3 class="text-info mt-4 mt-md-0 text-center">Lista de empleos disponibles ({{empleos.length}})</h3>
                 </div>
-                <div class="col-12">
+                <div class="col-10 offset-1">
                     <div class="input-group mb-3 d-none d-md-flex">
                         <input [(ngModel)]="searchText" type="text" class="form-control" placeholder="Buscar..." aria-label="Buscar..."
                             aria-describedby="opciones-buscar">
@@ -58,8 +58,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12">
-                    <div *ngFor="let i of empleos | paginate: { id: 'server', itemsPerPage: 5, currentPage: p }" class="card shadow-sm mb-2 mx-3">
+                <div class="col-10 offset-1">
+                    <div *ngFor="let i of empleos | paginate: { id: 'server', itemsPerPage: 5, currentPage: p }" class="card shadow-sm mb-2">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-12">
@@ -73,7 +73,7 @@
                                     <p class="text-black-50 mb-0"><i
                                             class="fas fa-calendar text-info mr-2"></i>Publicado el {{i.fecha_creacion}}</p>
                                     <div class="text-right">
-                                        <button type="button" class="btn btn-primary shadow-sm btn-sm">Ver
+                                        <button [routerLink]="['/empleos/ver', i.id]" type="button" class="btn btn-primary shadow-sm btn-sm">Ver
                                             empleo</button>
                                     </div>
                                 </div>

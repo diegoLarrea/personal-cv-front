@@ -21,7 +21,7 @@
                         </div>
                     </div>
                     <div class="col-10 offset-1 mb-4">
-                        <button (click)="login()" type="button" class="btn btn-primary btn-block btn-sm">INGRESAR</button>
+                        <button [class.dis]="loading" (click)="login()" type="button" class="btn btn-primary btn-block btn-sm"><i *ngIf="loading" class="fas fa-circle-notch fa-spin mr-2"></i>INGRESAR</button>
                     </div>
                     <div class="col-10 offset-1 mb-3">
                         <div class="text-center">

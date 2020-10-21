@@ -4,6 +4,7 @@ import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpErrorResponse
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Router } from '@angular/router';
+import { NgxUiLoaderService } from 'ngx-ui-loader';
 
 @Injectable({
     providedIn: 'root'
@@ -11,7 +12,8 @@ import { Router } from '@angular/router';
 export class AuthInterceptorService implements HttpInterceptor {
 
     constructor(
-        private router: Router
+        private router: Router,
+        private ngxService: NgxUiLoaderService
     ) { }
 
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
@@ -32,6 +34,7 @@ export class AuthInterceptorService implements HttpInterceptor {
             catchError((err: HttpErrorResponse) => {
 
                 if (err.status === 401) {
+                    this.ngxService.stop();
                     this.router.navigateByUrl('/login');
                 }
 

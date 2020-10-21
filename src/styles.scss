@@ -5,7 +5,11 @@ a {
     cursor: pointer !important;
 }
 
-h1, h2, h3, h4, h5, h6, a, label, button {
+h1, h2, h3, h4, h5, h6, a, label, button, .alert {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.q {
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -17,4 +21,9 @@ h1, h2, h3, h4, h5, h6, a, label, button {
 label {
     color: #e83e8c;
     font-weight: bolder;
+}
+
+.dis {
+    opacity: 0.75;
+    pointer-events: none;
 }

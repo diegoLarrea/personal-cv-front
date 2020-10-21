@@ -1,1 +1,157 @@
-<p>ver-empleo works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt-2">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a title="Página Principal" routerLink="/home"><i
+                                class="fas fa-home"></i></a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Empleo {{codigoEmpleo}}</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <div class="row" [hidden]="loading">
+        <div class="col-12">
+            <h2 class="text-info d-none d-md-block">{{empleo.oportunidad}} <span
+                    class="badge badge-primary">{{codigoEmpleo}}</span></h2>
+            <h4 class="text-info d-md-none">{{empleo.oportunidad}} <span
+                    class="badge badge-primary">{{codigoEmpleo}}</span></h4>
+            <div *ngIf="vigente" class="alert alert-primary" role="alert">
+                <div class="row">
+                    <div class="col-12 col-md-8">
+                        <i class="fas fa-info-circle mr-2"></i> La postulaciones se registrarán hasta el
+                        {{empleo.vigencia}}
+                    </div>
+                    <div class="col-12 col-md-4 text-center text-md-right">
+                        <button (click)="openModalPostulacion()" type="button"
+                            class="btn btn-info btn-sm"><i class="fas fa-star mr-2"></i>POSTULARME</button>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="vigente != null && !vigente" class="alert alert-info" role="alert">
+                <div class="row">
+                    <div class="col-12">
+                        <i class="fas fa-exclamation-circle mr-2"></i> La postulaciones se cerraron el
+                        {{empleo.vigencia}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <h6 class="text-info font-weight-bolder"><i class="fas fa-map-marker mr-2"></i>Localidad: <span
+                    class="text-black-50">{{empleo.localidad?.nombre}} - {{empleo.localidad?.direccion}}</span></h6>
+        </div>
+        <div class="col-12">
+            <h6 class="text-info font-weight-bolder"><i class="fas fa-street-view mr-2"></i>Área de trabajo: <span
+                    class="text-black-50">{{empleo.area?.nombre}}</span></h6>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="card my-1">
+                <div class="card-body">
+                    <h4 class="text-primary font-weight-bolder text-center">Descripción</h4>
+                    <h6 class="text-info font-weight-bolder">{{empleo.descripcion}}</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="card my-1">
+                <div class="card-body">
+                    <h4 class="text-primary font-weight-bolder text-center">Requisitos</h4>
+                    <h6 class="text-info font-weight-bolder">{{empleo.requisitos}}</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-info" id="loginModalLabel">Empleo {{codigoEmpleo}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <h6 class="text-black-50">Para postularse <span data-dismiss="modal" style="cursor: pointer;"
+                                routerLink="/login" class="text-primary">inicie sesión</span> o <span
+                                data-dismiss="modal" style="cursor: pointer;" routerLink="/register"
+                                class="text-primary">regístrese</span></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-info" id="loginModalLabel">Empleo {{codigoEmpleo}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <h6 class="text-black-50">Para postularse <span data-dismiss="modal" style="cursor: pointer;"
+                                routerLink="/login" class="text-primary">inicie sesión</span> o <span
+                                data-dismiss="modal" style="cursor: pointer;" routerLink="/register"
+                                class="text-primary">regístrese</span></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="postulacionModal" tabindex="-1" aria-labelledby="postulacionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-info" id="postulacionModalLabel">Empleo {{codigoEmpleo}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <h6 *ngIf="verificarLoading" class="text-black-50 text-center"><i class="fas fa-circle-notch fa-spin mr-2 text-info"></i> Verificando currículum</h6>
+                    </div>
+                    <div class="col-12">
+                        <div *ngIf="!verificarLoading && !usuario_tiene_datos" class="alert alert-info" role="alert">
+                            <div class="row">
+                                <div class="col-12">
+                                    <p class="text-center"><i class="fas fa-exclamation-circle mr-2"></i> Favor, complete su currículum antes de postularse</p>
+                                </div>
+                                <div class="col-12">
+                                    <div class="text-center">
+                                        <button data-dismiss="modal" type="button" routerLink="/curriculum" class="btn btn-sm btn-primary"><i class="fas fa-edit mr-2"></i>Completar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>

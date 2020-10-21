@@ -7,14 +7,11 @@ import { Router } from '@angular/router';
 @Injectable({
     providedIn: 'root'
 })
-export class EmpleoService {
+export class PostulacionService {
     constructor(private http: HttpClient) { }
     
-    getEmpleosHome():Observable<any>{    
-        return this.http.get(`${Host.api}/p-empleo/`);
+    verificarUsuario():Observable<any>{    
+        return this.http.get(`${Host.api}/usuario-verificar/`);
     }
 
-    getEmpleo(id):Observable<any>{    
-        return this.http.get(`${Host.api}/p-empleo/${id}`);
-    }
 }
