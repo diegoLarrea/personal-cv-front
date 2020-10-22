@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Stepper from 'bs-stepper';
 
 @Component({
   selector: 'app-cargar-cv',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CargarCvComponent implements OnInit {
 
+  stepper = null;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.stepper = new Stepper(document.querySelector('.bs-stepper'), {
+      linear: false
+    });
   }
 
+  next(){
+
+  }
 }

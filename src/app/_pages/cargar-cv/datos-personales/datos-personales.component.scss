@@ -1,0 +1,12 @@
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border:none;
+}
+
+.custom-control-input:checked ~ .custom-control-label.red::before {
+  background-color: #be0027;
+}
+
+.custom-control-input:checked ~ .custom-control-label.green::before {
+  background-color: #2c9f45;
+}

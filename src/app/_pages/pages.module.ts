@@ -18,6 +18,12 @@ import { EditarUsuarioComponent } from './usuario/editar-usuario/editar-usuario.
 import { AgregarUsuarioComponent } from './usuario/agregar-usuario/agregar-usuario.component';
 import { ConfiguracionComponent } from './configuracion/configuracion.component';
 import { HomePipe } from './home/home.pipe';
+import { DatosPersonalesComponent } from './cargar-cv/datos-personales/datos-personales.component';
+import { EducacionComponent } from './cargar-cv/educacion/educacion.component';
+import { IdiomasComponent } from './cargar-cv/idiomas/idiomas.component';
+import { ExperienciasComponent } from './cargar-cv/experiencias/experiencias.component';
+import { ReferenciasComponent } from './cargar-cv/referencias/referencias.component';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 
 @NgModule({
@@ -34,11 +40,17 @@ import { HomePipe } from './home/home.pipe';
     EditarEmpleoComponent,
     EditarUsuarioComponent,
     AgregarUsuarioComponent,
-    ConfiguracionComponent],
+    ConfiguracionComponent,
+    DatosPersonalesComponent,
+    EducacionComponent,
+    IdiomasComponent,
+    ExperienciasComponent,
+    ReferenciasComponent],
 
   imports: [
     CommonModule,
     NgxPaginationModule,
+    NgSelectModule,
     FormsModule,
     PagesRoutingModule
   ],

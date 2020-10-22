@@ -1,0 +1,158 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h3 class="text-primary font-weight-bolder">Datos personales</h3>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <label for="">Documento</label>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Documento" readonly>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <label for="">Nombres *</label>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Nombres...">
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <label for="">Apellidos *</label>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Apellidos...">
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <label for="">Fecha de Nacimiento *</label>
+            <div class="input-group mb-3">
+                <input type="date" class="form-control">
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <label for="">Sexo *</label>
+            <div class="input-group mb-3">
+                <ng-select [clearable]="false" style="width: 100%;" [placeholder]="'Elegir...'" [virtualScroll]="true"
+                    [closeOnSelect]="true" notFoundText="Sin resultados">
+                    <ng-option [value]="'F'">Femenino</ng-option>
+                    <ng-option [value]="'M'">Masculino</ng-option>
+                </ng-select>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <label for="">Estado Civil *</label>
+            <div class="input-group mb-3">
+                <ng-select [clearable]="false" style="width: 100%;" [placeholder]="'Elegir...'" [virtualScroll]="true"
+                    [closeOnSelect]="true" notFoundText="Sin resultados">
+                    <ng-option [value]="'Soltero/a'">Soltero/a</ng-option>
+                    <ng-option [value]="'Casado/a'">Casado/a</ng-option>
+                    <ng-option [value]="'Viudo/a'">Viudo/a</ng-option>
+                    <ng-option [value]="'Divorciado/a'">Divorciado/a</ng-option>
+                </ng-select>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <label for="">País Nacimiento *</label>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="País Nac...">
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <label for="">Ciudad Residencia *</label>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Ciudad Res...">
+            </div>
+        </div>
+        <div class="col-12">
+            <h3 class="text-primary font-weight-bolder">Contacto</h3>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <label for="">Email *</label>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Email...">
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <label for="">Celular 1 *</label>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Celular 1...">
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <label for="">Celular 2 *</label>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Celular 1...">
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <label for="">Teléfono</label>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Teléfono...">
+            </div>
+        </div>
+        <div class="col-12">
+            <h3 class="text-primary font-weight-bolder">Informaciones adicionales</h3>
+        </div>
+        <div class="col-12 col-lg-6">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h6 class="text-black-50 font-weight-bolder mb-2">¿Tiene familiar(es) que trabaja(n) en Personal? <span class="text-info">*</span></h6>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="rfs" name="rf" class="custom-control-input" value="SI">
+                        <label class="custom-control-label green" for="rfs">SI</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="rfn" name="rf" class="custom-control-input" value="NO">
+                        <label class="custom-control-label red" for="rfn">NO</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h6 class="text-black-50 font-weight-bolder mb-2">¿Ha trabajo en Personal? <span class="text-info">*</span></h6>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="rts" name="rt" class="custom-control-input" value="SI">
+                        <label class="custom-control-label green" for="rts">SI</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="rtn" name="rt" class="custom-control-input" value="NO">
+                        <label class="custom-control-label red" for="rtn">NO</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h6 class="text-black-50 font-weight-bolder">Redes Sociales</h6>
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <label for="">Linkedin</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Teléfono...">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="">Facebook</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Teléfono...">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="">Twitter</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Teléfono...">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="">Web</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Teléfono...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>     
+        </div>  
+    </div>
+</div>

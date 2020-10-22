@@ -34,4 +34,55 @@ export class PagesComponent implements OnInit {
     this.user = null;
   }
   
+  sideBar = [
+    {
+      nombre: "Pág. Principal",
+      active: false,
+      perm: null,
+      route: "/home",
+      icon: "fas fa-home mr-2"
+    },
+    {
+      nombre: "Currículum",
+      active: false,
+      perm: null,
+      route: "/curriculum",
+      icon: "fas fa-user-tie mr-2"
+    },
+    {
+      nombre: "Postulaciones",
+      active: false,
+      perm: null,
+      route: "/postulaciones",
+      icon: "fas fa-star mr-2"
+    },
+    {
+      nombre: "Procesos",
+      active: false,
+      perm: null,
+      route: "/procesos",
+      icon: "fas fa-clipboard-list mr-2"
+    },
+    {
+      nombre: "Empleos",
+      active: false,
+      perm: null,
+      route: "/empleos",
+      icon: "fas fa-briefcase mr-2"
+    },
+    {
+      nombre: "Usuarios",
+      active: false,
+      perm: null,
+      route: "/usuarios",
+      icon: "fas fa-users mr-2"
+    },
+    {
+      nombre: "Configuraciones",
+      active: false,
+      perm: null,
+      route: "/configuraciones",
+      icon: "fas fa-cogs mr-2"
+    }
+  ]
 }

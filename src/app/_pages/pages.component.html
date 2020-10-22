@@ -13,31 +13,8 @@
         </div>
 
         <ul class="list-unstyled components">
-            <li>
-                <a (click)="f1()" routerLink="/home"><i class="fas fa-home mr-2"></i>Pág. Principal</a>
-            </li>
-            <li>
-                <a (click)="f1()" routerLink="/curriculum"><i class="fas fa-user-tie mr-2"></i>Currículum</a>
-            </li>
-            <li>
-                <a (click)="f1()" routerLink="/postulaciones"><i class="fas fa-star mr-2"></i>Postulaciones</a>
-            </li>
-            <li>
-                <a href="#admin-menu" data-toggle="collapse" aria-expanded="false">Administración <i class="fas fa-sort-down float-right mr-2"></i></a>
-                <ul class="collapse list-unstyled" id="admin-menu">
-                    <li>
-                        <a (click)="f1()" routerLink="/procesos"><i class="fas fa-clipboard-list mr-2"></i>Procesos</a>
-                    </li>
-                    <li>
-                        <a (click)="f1()" routerLink="/empleos"><i class="fas fa-briefcase mr-2"></i>Empleos</a>
-                    </li>
-                    <li>
-                        <a (click)="f1()" routerLink="/usuarios"><i class="fas fa-users mr-2"></i>Usuarios</a>
-                    </li>
-                    <li>
-                        <a (click)="f1()" routerLink="/configuraciones"><i class="fas fa-cogs mr-2"></i>Configuraciones</a>
-                    </li>
-                </ul>
+            <li *ngFor="let i of sideBar" (mouseover)="i.active=true" (mouseout)="i.active=false">
+                <a (click)="f1()" routerLink="{{i.route}}" class="animate__animated {{i.active?'animate__pulse animate__faster':''}}"><i class="{{i.icon}}"></i>{{i.nombre}}</a>
             </li>
         </ul>
         <div class="mt-3">

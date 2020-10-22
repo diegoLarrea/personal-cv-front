@@ -1,1 +1,58 @@
-<p>cargar-cv works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="bs-stepper">
+                <div class="bs-stepper-header" role="tablist">
+                    <!-- your steps here -->
+                    <div class="step" data-target="#datos-personales">
+                        <button type="button" class="step-trigger" role="tab" aria-controls="datos-personales"
+                            id="datos-personales-trigger">
+                            <span class="bs-stepper-circle bg-info"><i class="fas fa-user"></i></span>
+                            <span class="bs-stepper-label q text-black-50 d-none d-md-block">Datos Personales</span>
+                        </button>
+                    </div>
+                    <div class="line"></div>
+                    <div class="step" data-target="#educacion">
+                        <button type="button" class="step-trigger" role="tab" aria-controls="educacion"
+                            id="educacion-trigger">
+                            <span class="bs-stepper-circle bg-info"><i class="fas fa-graduation-cap"></i></span>
+                            <span class="bs-stepper-label q text-black-50  d-none d-md-block">Educación</span>
+                        </button>
+                    </div>
+                    <div class="line"></div>
+                    <div class="step" data-target="#experiencia">
+                        <button type="button" class="step-trigger" role="tab" aria-controls="experiencia"
+                            id="experiencia-trigger">
+                            <span class="bs-stepper-circle bg-info"><i class="fas fa-briefcase"></i></span>
+                            <span class="bs-stepper-label q text-black-50  d-none d-md-block">Experiencias</span>
+                        </button>
+                    </div>
+                    <div class="line"></div>
+                    <div class="step" data-target="#referencia">
+                        <button type="button" class="step-trigger" role="tab" aria-controls="referencia"
+                            id="referencia-trigger">
+                            <span class="bs-stepper-circle bg-info"><i class="fas fa-phone"></i></span>
+                            <span class="bs-stepper-label q text-black-50  d-none d-md-block">Referencias</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="bs-stepper-content">
+                    <!-- your steps content here -->
+                    <div id="datos-personales" class="content" role="tabpanel" aria-labelledby="datos-personales-trigger">
+                        <app-datos-personales></app-datos-personales>
+                    </div>
+                    <div id="educacion" class="content" role="tabpanel" aria-labelledby="educacion-trigger">
+                        <app-educacion></app-educacion>
+                        <app-idiomas></app-idiomas>
+                    </div>
+                    <div id="experiencia" class="content" role="tabpanel" aria-labelledby="experiencia-trigger">
+                        <app-experiencias></app-experiencias>
+                    </div>
+                    <div id="referencia" class="content" role="tabpanel" aria-labelledby="referencia-trigger">
+                        <app-referencias></app-referencias>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
