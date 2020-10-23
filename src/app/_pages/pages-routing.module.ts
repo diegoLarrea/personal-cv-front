@@ -13,7 +13,9 @@ import { ListarProcesoComponent } from './proceso/listar-proceso/listar-proceso.
 import { AgregarUsuarioComponent } from './usuario/agregar-usuario/agregar-usuario.component';
 import { EditarUsuarioComponent } from './usuario/editar-usuario/editar-usuario.component';
 import { ListarUsuarioComponent } from './usuario/listar-usuario/listar-usuario.component';
-
+import { 
+  AuthGuardService as AuthGuard 
+} from 'src/_services/guard';
 const routes: Routes = [
   {
     path: "",
@@ -26,23 +28,28 @@ const routes: Routes = [
       {path: "", redirectTo: "home", pathMatch: "full"},
       {
         path: "curriculum",
-        component: CargarCvComponent
+        component: CargarCvComponent,
+        canActivate: [AuthGuard] 
       },
       {
         path: "postulaciones",
-        component: PostulacionComponent
+        component: PostulacionComponent,
+        canActivate: [AuthGuard] 
       },
       {
         path: "procesos",
-        component: ListarProcesoComponent
+        component: ListarProcesoComponent,
+        canActivate: [AuthGuard] 
       },
       {
         path: "empleos",
-        component: ListarEmpleoComponent
+        component: ListarEmpleoComponent,
+        canActivate: [AuthGuard] 
       },
       {
         path: "empleos/agregar",
-        component: AgregarEmpleoComponent
+        component: AgregarEmpleoComponent,
+        canActivate: [AuthGuard] 
       },
       {
         path: "empleos/ver/:id",
@@ -50,23 +57,28 @@ const routes: Routes = [
       },
       {
         path: "empleos/editar/:id",
-        component: EditarEmpleoComponent
+        component: EditarEmpleoComponent,
+        canActivate: [AuthGuard] 
       },
       {
         path: "usuarios",
-        component: ListarUsuarioComponent
+        component: ListarUsuarioComponent,
+        canActivate: [AuthGuard] 
       },
       {
         path: "usuarios/agregar",
-        component: AgregarUsuarioComponent
+        component: AgregarUsuarioComponent,
+        canActivate: [AuthGuard] 
       },
       {
         path: "usuarios/editar/:id",
-        component: EditarUsuarioComponent
+        component: EditarUsuarioComponent,
+        canActivate: [AuthGuard] 
       },
       {
         path: "configuraciones",
-        component: ConfiguracionComponent
+        component: ConfiguracionComponent,
+        canActivate: [AuthGuard] 
       }
     ] 
   }

@@ -1,0 +1,1556 @@
+[
+ {
+   "Puesto": "1",
+   "Municipio": "Asunción",
+   "Población (2019)": "522.287",
+   "Departamento": "Distrito Capital"
+ },
+ {
+   "Puesto": "2",
+   "Municipio": "Ciudad del Este",
+   "Población (2019)": "301.815",
+   "Departamento": "Alto Paraná"
+ },
+ {
+   "Puesto": "3",
+   "Municipio": "Luque",
+   "Población (2019)": "277.301",
+   "Departamento": "Central"
+ },
+ {
+   "Puesto": "4",
+   "Municipio": "San Lorenzo",
+   "Población (2019)": "257.530",
+   "Departamento": "Central"
+ },
+ {
+   "Puesto": "5",
+   "Municipio": "Capiatá",
+   "Población (2019)": "236.828",
+   "Departamento": "Central"
+ },
+ {
+   "Puesto": "6",
+   "Municipio": "Lambaré",
+   "Población (2019)": "179.800",
+   "Departamento": "Central"
+ },
+ {
+   "Puesto": "7",
+   "Municipio": "Fernando de la Mora",
+   "Población (2019)": "176.943",
+   "Departamento": "Central"
+ },
+ {
+   "Puesto": "8",
+   "Municipio": "Limpio",
+   "Población (2019)": "145.740",
+   "Departamento": "Central"
+ },
+ {
+   "Puesto": "9",
+   "Municipio": "Ñemby",
+   "Población (2019)": "139.691",
+   "Departamento": "Central"
+ },
+ {
+   "Puesto": "10",
+   "Municipio": "Encarnación",
+   "Población (2019)": "134.059",
+   "Departamento": "Itapúa"
+ },
+ {
+   "Puesto": "11",
+   "Municipio": "Caaguazú",
+   "Población (2019)": "126.091",
+   "Departamento": "Caaguazú"
+ },
+ {
+   "Puesto": "12",
+   "Municipio": "Coronel Oviedo",
+   "Población (2019)": "121.626",
+   "Departamento": "Caaguazú"
+ },
+ {
+   "Puesto": "13",
+   "Municipio": "Pedro Juan Caballero",
+   "Población (2019)": "120.576",
+   "Departamento": "Amambay"
+ },
+ {
+   "Puesto": "14",
+   "Municipio": "Itauguá",
+   "Población (2019)": "109.203",
+   "Departamento": "Central"
+ },
+ {
+   "Puesto": "15",
+   "Municipio": "Mariano Roque Alonso",
+   "Población (2019)": "103.759",
+   "Departamento": "Central"
+ },
+ {
+   "Puesto": "16",
+   "Municipio": "Presidente Franco",
+   "Población (2019)": "101.720",
+   "Departamento": "Alto Paraná"
+ },
+ {
+   "Puesto": "17",
+   "Municipio": "Minga Guazú",
+   "Población (2019)": "89.129",
+   "Departamento": "Alto Paraná"
+ },
+ {
+   "Puesto": "18",
+   "Municipio": "Concepción",
+   "Población (2019)": "85.876",
+   "Departamento": "Concepción"
+ },
+ {
+   "Puesto": "19",
+   "Municipio": "Itá",
+   "Población (2019)": "80.441",
+   "Departamento": "Central"
+ },
+ {
+   "Puesto": "20",
+   "Municipio": "Villa Elisa",
+   "Población (2019)": "79.932",
+   "Departamento": "Central"
+ },
+ {
+   "Puesto": "21",
+   "Municipio": "Hernandarias",
+   "Población (2019)": "79.690",
+   "Departamento": "Alto Paraná"
+ },
+ {
+   "Puesto": "22",
+   "Municipio": "Areguá",
+   "Población (2019)": "75.858",
+   "Departamento": "Central"
+ },
+ {
+   "Puesto": "23",
+   "Municipio": "Villarrica",
+   "Población (2019)": "73.388",
+   "Departamento": "Guairá"
+ },
+ {
+   "Puesto": "24",
+   "Municipio": "San Antonio",
+   "Población (2019)": "68.127",
+   "Departamento": "Central"
+ },
+ {
+   "Puesto": "25",
+   "Municipio": "Horqueta",
+   "Población (2019)": "62.008",
+   "Departamento": "Concepción"
+ },
+ {
+   "Puesto": "26",
+   "Municipio": "Cambyretá",
+   "Población (2019)": "58.412",
+   "Departamento": "Itapúa"
+ },
+ {
+   "Puesto": "27",
+   "Municipio": "Caacupé",
+   "Población (2019)": "56.864",
+   "Departamento": "Cordillera"
+ },
+ {
+   "Puesto": "28",
+   "Municipio": "Curuguaty",
+   "Población (2019)": "56.634",
+   "Departamento": "Canindeyú"
+ },
+ {
+   "Puesto": "29",
+   "Municipio": "San Estanislao",
+   "Población (2019)": "55.936",
+   "Departamento": "San Pedro"
+ },
+ {
+   "Puesto": "30",
+   "Municipio": "Julián Augusto Saldívar",
+   "Población (2019)": "54.290",
+   "Departamento": "Central"
+ },
+ {
+   "Puesto": "31",
+   "Municipio": "Ypané",
+   "Población (2019)": "53.506",
+   "Departamento": "Central"
+ },
+ {
+   "Puesto": "32",
+   "Municipio": "Villa Hayes",
+   "Población (2019)": "49.328",
+   "Departamento": "Presidente Hayes"
+ },
+ {
+   "Puesto": "33",
+   "Municipio": "Capiibary",
+   "Población (2019)": "46.732",
+   "Departamento": "San Pedro"
+ },
+ {
+   "Puesto": "34",
+   "Municipio": "Santa Rosa del Aguaray",
+   "Población (2019)": "41.249",
+   "Departamento": "San Pedro"
+ },
+ {
+   "Puesto": "35",
+   "Municipio": "Villeta",
+   "Población (2019)": "40.161",
+   "Departamento": "Central"
+ },
+ {
+   "Puesto": "36",
+   "Municipio": "San Juan Nepomuceno",
+   "Población (2019)": "39.232",
+   "Departamento": "Caazapá"
+ },
+ {
+   "Puesto": "37",
+   "Municipio": "Itakyry",
+   "Población (2019)": "38.577",
+   "Departamento": "Alto Paraná"
+ },
+ {
+   "Puesto": "38",
+   "Municipio": "Doctor Juan Eulogio Estigarribia",
+   "Población (2019)": "38.481",
+   "Departamento": "Caaguazú"
+ },
+ {
+   "Puesto": "39",
+   "Municipio": "Carapeguá",
+   "Población (2019)": "36.360",
+   "Departamento": "Paraguarí"
+ },
+ {
+   "Puesto": "40",
+   "Municipio": "Guarambaré",
+   "Población (2019)": "36.066",
+   "Departamento": "Central"
+ },
+ {
+   "Puesto": "41",
+   "Municipio": "Salto del Guairá",
+   "Población (2019)": "35.493",
+   "Departamento": "Canindeyú"
+ },
+ {
+   "Puesto": "42",
+   "Municipio": "San Pedro de Ycuamandiyú",
+   "Población (2019)": "35.195",
+   "Departamento": "San Pedro"
+ },
+ {
+   "Puesto": "43",
+   "Municipio": "Yhú",
+   "Población (2019)": "35.023",
+   "Departamento": "Caaguazú"
+ },
+ {
+   "Puesto": "44",
+   "Municipio": "San Pedro del Paraná",
+   "Población (2019)": "33.729",
+   "Departamento": "Itapúa"
+ },
+ {
+   "Puesto": "45",
+   "Municipio": "San Ignacio Guazú",
+   "Población (2019)": "50.123",
+   "Departamento": "Misiones"
+ },
+ {
+   "Puesto": "46",
+   "Municipio": "Repatriación",
+   "Población (2019)": "33.303",
+   "Departamento": "Caaguazú"
+ },
+ {
+   "Puesto": "47",
+   "Municipio": "Pilar",
+   "Población (2019)": "32.810",
+   "Departamento": "Ñeembucú"
+ },
+ {
+   "Puesto": "48",
+   "Municipio": "Santa Rita",
+   "Población (2019)": "32.610",
+   "Departamento": "Alto Paraná"
+ },
+ {
+   "Puesto": "49",
+   "Municipio": "Abaí",
+   "Población (2019)": "32.538",
+   "Departamento": "Caazapá"
+ },
+ {
+   "Puesto": "50",
+   "Municipio": "Tobatí",
+   "Población (2019)": "32.526",
+   "Departamento": "Cordillera"
+ },
+ {
+   "Puesto": "51",
+   "Municipio": "Yby Yaú",
+   "Población (2019)": "32.067",
+   "Departamento": "Concepción"
+ },
+ {
+   "Puesto": "52",
+   "Municipio": "Yaguarón",
+   "Población (2019)": "31.707",
+   "Departamento": "Paraguarí"
+ },
+ {
+   "Puesto": "53",
+   "Municipio": "Guayaibí",
+   "Población (2019)": "30.884",
+   "Departamento": "San Pedro"
+ },
+ {
+   "Puesto": "54",
+   "Municipio": "Tomás Romero Pereira",
+   "Población (2019)": "29.978",
+   "Departamento": "Itapúa"
+ },
+ {
+   "Puesto": "55",
+   "Municipio": "Choré",
+   "Población (2019)": "29.798",
+   "Departamento": "San Pedro"
+ },
+ {
+   "Puesto": "56",
+   "Municipio": "Mariscal José Félix Estigarribia",
+   "Población (2019)": "28.870",
+   "Departamento": "Boquerón"
+ },
+ {
+   "Puesto": "57",
+   "Municipio": "Piribebuy",
+   "Población (2019)": "28.773",
+   "Departamento": "Cordillera"
+ },
+ {
+   "Puesto": "58",
+   "Municipio": "Yasy Cañy",
+   "Población (2019)": "27.568",
+   "Departamento": "Canindeyú"
+ },
+ {
+   "Puesto": "59",
+   "Municipio": "Ypacaraí",
+   "Población (2019)": "27.379",
+   "Departamento": "Central"
+ },
+ {
+   "Puesto": "60",
+   "Municipio": "Independencia",
+   "Población (2019)": "27.201",
+   "Departamento": "Guairá"
+ },
+ {
+   "Puesto": "61",
+   "Municipio": "Paso Yobái",
+   "Población (2019)": "26.798",
+   "Departamento": "Guairá"
+ },
+ {
+   "Puesto": "62",
+   "Municipio": "Teniente Primero Manuel Irala Fernández",
+   "Población (2019)": "26.457",
+   "Departamento": "Presidente Hayes"
+ },
+ {
+   "Puesto": "63",
+   "Municipio": "Caazapá",
+   "Población (2019)": "26.377",
+   "Departamento": "Caazapá"
+ },
+ {
+   "Puesto": "64",
+   "Municipio": "Juan Emilio O'Leary",
+   "Población (2019)": "25.880",
+   "Departamento": "Alto Paraná"
+ },
+ {
+   "Puesto": "65",
+   "Municipio": "General Isidoro Resquín",
+   "Población (2019)": "25.253",
+   "Departamento": "San Pedro"
+ },
+ {
+   "Puesto": "66",
+   "Municipio": "Arroyos y Esteros",
+   "Población (2019)": "24.969",
+   "Departamento": "Cordillera"
+ },
+ {
+   "Puesto": "67",
+   "Municipio": "Ybycuí",
+   "Población (2019)": "24.964",
+   "Departamento": "Paraguarí"
+ },
+ {
+   "Puesto": "68",
+   "Municipio": "Doctor Juan Manuel Frutos",
+   "Población (2019)": "24.621",
+   "Departamento": "Caaguazú"
+ },
+ {
+   "Puesto": "69",
+   "Municipio": "Liberación",
+   "Población (2019)": "24.589",
+   "Departamento": "San Pedro"
+ },
+ {
+   "Puesto": "70",
+   "Municipio": "Edelira",
+   "Población (2019)": "24.345",
+   "Departamento": "Itapúa"
+ },
+ {
+   "Puesto": "71",
+   "Municipio": "General Elizardo Aquino",
+   "Población (2019)": "24.224",
+   "Departamento": "San Pedro"
+ },
+ {
+   "Puesto": "72",
+   "Municipio": "Paraguarí",
+   "Población (2019)": "24.092",
+   "Departamento": "Paraguarí"
+ },
+ {
+   "Puesto": "73",
+   "Municipio": "Eusebio Ayala",
+   "Población (2019)": "23.934",
+   "Departamento": "Cordillera"
+ },
+ {
+   "Puesto": "74",
+   "Municipio": "San Juan Bautista",
+   "Población (2019)": "32.062",
+   "Departamento": "Misiones"
+ },
+ {
+   "Puesto": "75",
+   "Municipio": "San Rafael del Paraná",
+   "Población (2019)": "22.936",
+   "Departamento": "Itapúa"
+ },
+ {
+   "Puesto": "76",
+   "Municipio": "Yuty",
+   "Población (2019)": "22.590",
+   "Departamento": "Caazapá"
+ },
+ {
+   "Puesto": "77",
+   "Municipio": "Doctor Juan León Mallorquín",
+   "Población (2019)": "22.244",
+   "Departamento": "Alto Paraná"
+ },
+ {
+   "Puesto": "78",
+   "Municipio": "Quiindy",
+   "Población (2019)": "21.480",
+   "Departamento": "Paraguarí"
+ },
+ {
+   "Puesto": "79",
+   "Municipio": "Natalio",
+   "Población (2019)": "21.248",
+   "Departamento": "Itapúa"
+ },
+ {
+   "Puesto": "80",
+   "Municipio": "Coronel José Félix Bogado",
+   "Población (2019)": "21.060",
+   "Departamento": "Itapúa"
+ },
+ {
+   "Puesto": "81",
+   "Municipio": "Benjamín Aceval",
+   "Población (2019)": "20.377",
+   "Departamento": "Presidente Hayes"
+ },
+ {
+   "Puesto": "82",
+   "Municipio": "Carlos Antonio López",
+   "Población (2019)": "19.832",
+   "Departamento": "Itapúa"
+ },
+ {
+   "Puesto": "83",
+   "Municipio": "San José de los Arroyos",
+   "Población (2019)": "19.779",
+   "Departamento": "Caaguazú"
+ },
+ {
+   "Puesto": "84",
+   "Municipio": "Emboscada",
+   "Población (2019)": "19.042",
+   "Departamento": "Cordillera"
+ },
+ {
+   "Puesto": "85",
+   "Municipio": "Capitán Bado",
+   "Población (2019)": "18.929",
+   "Departamento": "Amambay"
+ },
+ {
+   "Puesto": "86",
+   "Municipio": "Tres de Mayo",
+   "Población (2019)": "18.770",
+   "Departamento": "Caazapá"
+ },
+ {
+   "Puesto": "87",
+   "Municipio": "Loreto",
+   "Población (2019)": "18.701",
+   "Departamento": "Concepción"
+ },
+ {
+   "Puesto": "88",
+   "Municipio": "Filadelfia",
+   "Población (2019)": "18.641",
+   "Departamento": "Boquerón"
+ },
+ {
+   "Puesto": "89",
+   "Municipio": "Ayolas",
+   "Población (2019)": "18.594",
+   "Departamento": "Misiones"
+ },
+ {
+   "Puesto": "90",
+   "Municipio": "Santa Rosa de Lima",
+   "Población (2019)": "18.450",
+   "Departamento": "Misiones"
+ },
+ {
+   "Puesto": "91",
+   "Municipio": "Tavaí",
+   "Población (2019)": "18.359",
+   "Departamento": "Caazapá"
+ },
+ {
+   "Puesto": "92",
+   "Municipio": "San Joaquín",
+   "Población (2019)": "17.983",
+   "Departamento": "Caaguazú"
+ },
+ {
+   "Puesto": "93",
+   "Municipio": "Alto Verá",
+   "Población (2019)": "17.867",
+   "Departamento": "Itapúa"
+ },
+ {
+   "Puesto": "94",
+   "Municipio": "Pirayú",
+   "Población (2019)": "17.853",
+   "Departamento": "Paraguarí"
+ },
+ {
+   "Puesto": "95",
+   "Municipio": "Villa Ygatimí",
+   "Población (2019)": "17.217",
+   "Departamento": "Canindeyú"
+ },
+ {
+   "Puesto": "96",
+   "Municipio": "Raúl Arsenio Oviedo",
+   "Población (2019)": "17.205",
+   "Departamento": "Caaguazú"
+ },
+ {
+   "Puesto": "97",
+   "Municipio": "Obligado",
+   "Población (2019)": "16.936",
+   "Departamento": "Itapúa"
+ },
+ {
+   "Puesto": "98",
+   "Municipio": "Itapúa Poty",
+   "Población (2019)": "16.924",
+   "Departamento": "Itapúa"
+ },
+ {
+   "Puesto": "99",
+   "Municipio": "Atyrá",
+   "Población (2019)": "16.908",
+   "Departamento": "Cordillera"
+ },
+ {
+   "Puesto": "100",
+   "Municipio": "Bella Vista Norte",
+   "Población (2019)": "16.859",
+   "Departamento": "Amambay"
+ },
+ {
+   "Puesto": "101",
+   "Municipio": "Loma Plata",
+   "Población (2019)": "16.787",
+   "Departamento": "Boquerón"
+ },
+ {
+   "Puesto": "102",
+   "Municipio": "Acahay",
+   "Población (2019)": "16.296",
+   "Departamento": "Paraguarí"
+ },
+ {
+   "Puesto": "103",
+   "Municipio": "Tacuatí",
+   "Población (2019)": "16.014",
+   "Departamento": "San Pedro"
+ },
+ {
+   "Puesto": "104",
+   "Municipio": "Carayaó",
+   "Población (2019)": "15.982",
+   "Departamento": "Caaguazú"
+ },
+ {
+   "Puesto": "105",
+   "Municipio": "Yrybucuá",
+   "Población (2019)": "15.765",
+   "Departamento": "San Pedro"
+ },
+ {
+   "Puesto": "106",
+   "Municipio": "Mayor Julio Dionisio Otaño",
+   "Población (2019)": "15.515",
+   "Departamento": "Itapúa"
+ },
+ {
+   "Puesto": "107",
+   "Municipio": "Hohenau",
+   "Población (2019)": "15.092",
+   "Departamento": "Itapúa"
+ },
+ {
+   "Puesto": "108",
+   "Municipio": "Minga Porá",
+   "Población (2019)": "14.920",
+   "Departamento": "Alto Paraná"
+ },
+ {
+   "Puesto": "109",
+   "Municipio": "Tembiaporá",
+   "Población (2019)": "14.654",
+   "Departamento": "Caaguazú"
+ },
+ {
+   "Puesto": "110",
+   "Municipio": "Mbuyapey",
+   "Población (2019)": "14.609",
+   "Departamento": "Paraguarí"
+ },
+ {
+   "Puesto": "111",
+   "Municipio": "Altos",
+   "Población (2019)": "14.383",
+   "Departamento": "Cordillera"
+ },
+ {
+   "Puesto": "112",
+   "Municipio": "Capitán Meza",
+   "Población (2019)": "14.217",
+   "Departamento": "Itapúa"
+ },
+ {
+   "Puesto": "113",
+   "Municipio": "Bella Vista",
+   "Población (2019)": "14.187",
+   "Departamento": "Itapúa"
+ },
+ {
+   "Puesto": "114",
+   "Municipio": "Ybyrarobaná",
+   "Población (2019)": "14.096",
+   "Departamento": "Canindeyú"
+ },
+ {
+   "Puesto": "115",
+   "Municipio": "Caraguatay",
+   "Población (2019)": "13.699",
+   "Departamento": "Cordillera"
+ },
+ {
+   "Puesto": "116",
+   "Municipio": "Capitán Miranda",
+   "Población (2019)": "13.644",
+   "Departamento": "Itapúa"
+ },
+ {
+   "Puesto": "117",
+   "Municipio": "Yatytay",
+   "Población (2019)": "13.305",
+   "Departamento": "Itapúa"
+ },
+ {
+   "Puesto": "118",
+   "Municipio": "General Artigas",
+   "Población (2019)": "13.131",
+   "Departamento": "Itapúa"
+ },
+ {
+   "Puesto": "119",
+   "Municipio": "Santa Rosa del Mbutuy",
+   "Población (2019)": "13.047",
+   "Departamento": "Caaguazú"
+ },
+ {
+   "Puesto": "120",
+   "Municipio": "Nueva Esperanza",
+   "Población (2019)": "12.864",
+   "Departamento": "Canindeyú"
+ },
+ {
+   "Puesto": "121",
+   "Municipio": "Belén",
+   "Población (2019)": "12.814",
+   "Departamento": "Concepción"
+ },
+ {
+   "Puesto": "122",
+   "Municipio": "Yataity del Norte",
+   "Población (2019)": "12.671",
+   "Departamento": "San Pedro"
+ },
+ {
+   "Puesto": "123",
+   "Municipio": "Nueva Italia",
+   "Población (2019)": "12.319",
+   "Departamento": "Central"
+ },
+ {
+   "Puesto": "124",
+   "Municipio": "San Roque González de Santa Cruz",
+   "Población (2019)": "12.290",
+   "Departamento": "Paraguarí"
+ },
+ {
+   "Puesto": "125",
+   "Municipio": "Lima",
+   "Población (2019)": "12.241",
+   "Departamento": "San Pedro"
+ },
+ {
+   "Puesto": "126",
+   "Municipio": "San Alberto",
+   "Población (2019)": "12.144",
+   "Departamento": "Alto Paraná"
+ },
+ {
+   "Puesto": "127",
+   "Municipio": "San Bernardino",
+   "Población (2019)": "11.967",
+   "Departamento": "Cordillera"
+ },
+ {
+   "Puesto": "128",
+   "Municipio": "General Francisco Caballero Álvarez",
+   "Población (2019)": "11.963",
+   "Departamento": "Canindeyú"
+ },
+ {
+   "Puesto": "129",
+   "Municipio": "Vaquería",
+   "Población (2019)": "11.866",
+   "Departamento": "Caaguazú"
+ },
+ {
+   "Puesto": "130",
+   "Municipio": "Yby Pytá",
+   "Población (2019)": "11.862",
+   "Departamento": "Canindeyú"
+ },
+ {
+   "Puesto": "131",
+   "Municipio": "San Lázaro",
+   "Población (2019)": "11.755",
+   "Departamento": "Concepción"
+ },
+ {
+   "Puesto": "132",
+   "Municipio": "Itacurubí del Rosario",
+   "Población (2019)": "11.743",
+   "Departamento": "San Pedro"
+ },
+ {
+   "Puesto": "133",
+   "Municipio": "Yguazú",
+   "Población (2019)": "11.264",
+   "Departamento": "Alto Paraná"
+ },
+ {
+   "Puesto": "134",
+   "Municipio": "José Domingo Ocampos",
+   "Población (2019)": "11.238",
+   "Departamento": "Caaguazú"
+ },
+ {
+   "Puesto": "135",
+   "Municipio": "Itacurubí de la Cordillera",
+   "Población (2019)": "11.163",
+   "Departamento": "Cordillera"
+ },
+ {
+   "Puesto": "136",
+   "Municipio": "Villa del Rosario",
+   "Población (2019)": "11.069",
+   "Departamento": "San Pedro"
+ },
+ {
+   "Puesto": "137",
+   "Municipio": "Capitán Mauricio José Troche",
+   "Población (2019)": "11.034",
+   "Departamento": "Guairá"
+ },
+ {
+   "Puesto": "138",
+   "Municipio": "San Cristóbal",
+   "Población (2019)": "11.021",
+   "Departamento": "Alto Paraná"
+ },
+ {
+   "Puesto": "139",
+   "Municipio": "Puerto Pinasco",
+   "Población (2019)": "10.436",
+   "Departamento": "Presidente Hayes"
+ },
+ {
+   "Puesto": "140",
+   "Municipio": "Los Cedrales",
+   "Población (2019)": "10.347",
+   "Departamento": "Alto Paraná"
+ },
+ {
+   "Puesto": "141",
+   "Municipio": "25 de Diciembre",
+   "Población (2019)": "10.246",
+   "Departamento": "San Pedro"
+ },
+ {
+   "Puesto": "142",
+   "Municipio": "Borja",
+   "Población (2019)": "10.234",
+   "Departamento": "Guairá"
+ },
+ {
+   "Puesto": "143",
+   "Municipio": "Fram",
+   "Población (2019)": "10.200",
+   "Departamento": "Itapúa"
+ },
+ {
+   "Puesto": "144",
+   "Municipio": "Tres de Febrero",
+   "Población (2019)": "10.038",
+   "Departamento": "Caaguazú"
+ },
+ {
+   "Puesto": "145",
+   "Municipio": "San Cosme y Damián",
+   "Población (2019)": "10.002",
+   "Departamento": "Itapúa"
+ },
+ {
+   "Puesto": "146",
+   "Municipio": "Corpus Christi",
+   "Población (2019)": "9.942",
+   "Departamento": "Canindeyú"
+ },
+ {
+   "Puesto": "147",
+   "Municipio": "San Juan del Paraná",
+   "Población (2019)": "9.693",
+   "Departamento": "Itapúa"
+ },
+ {
+   "Puesto": "148",
+   "Municipio": "Trinidad",
+   "Población (2019)": "9.651",
+   "Departamento": "Itapúa"
+ },
+ {
+   "Puesto": "149",
+   "Municipio": "Ñacunday",
+   "Población (2019)": "9.544",
+   "Departamento": "Alto Paraná"
+ },
+ {
+   "Puesto": "150",
+   "Municipio": "R. I. Tres Corrales",
+   "Población (2019)": "9.478",
+   "Departamento": "Caaguazú"
+ },
+ {
+   "Puesto": "151",
+   "Municipio": "Alberdi",
+   "Población (2019)": "9.356",
+   "Departamento": "Ñeembucú"
+ },
+ {
+   "Puesto": "152",
+   "Municipio": "Doctor Raúl Peña",
+   "Población (2019)": "9.250",
+   "Departamento": "Alto Paraná"
+ },
+ {
+   "Puesto": "153",
+   "Municipio": "Pirapó",
+   "Población (2019)": "9.201",
+   "Departamento": "Itapúa"
+ },
+ {
+   "Puesto": "154",
+   "Municipio": "Iturbe",
+   "Población (2019)": "9.183",
+   "Departamento": "Guairá"
+ },
+ {
+   "Puesto": "155",
+   "Municipio": "Azotey",
+   "Población (2019)": "8.920",
+   "Departamento": "Concepción"
+ },
+ {
+   "Puesto": "156",
+   "Municipio": "La Paloma del Espíritu Santo",
+   "Población (2019)": "8.899",
+   "Departamento": "Canindeyú"
+ },
+ {
+   "Puesto": "157",
+   "Municipio": "Mbaracayú",
+   "Población (2019)": "8.886",
+   "Departamento": "Alto Paraná"
+ },
+ {
+   "Puesto": "158",
+   "Municipio": "Santa María de Fe",
+   "Población (2019)": "8.858",
+   "Departamento": "Misiones"
+ },
+ {
+   "Puesto": "159",
+   "Municipio": "Carmen del Paraná",
+   "Población (2019)": "8.855",
+   "Departamento": "Itapúa"
+ },
+ {
+   "Puesto": "160",
+   "Municipio": "Katueté",
+   "Población (2019)": "8.763",
+   "Departamento": "Canindeyú"
+ },
+ {
+   "Puesto": "161",
+   "Municipio": "Ypejhú",
+   "Población (2019)": "8.710",
+   "Departamento": "Canindeyú"
+ },
+ {
+   "Puesto": "162",
+   "Municipio": "Mbocayaty del Guairá",
+   "Población (2019)": "8.709",
+   "Departamento": "Guairá"
+ },
+ {
+   "Puesto": "163",
+   "Municipio": "Escobar",
+   "Población (2019)": "8.691",
+   "Departamento": "Paraguarí"
+ },
+ {
+   "Puesto": "164",
+   "Municipio": "General Eugenio Alejandrino Garay",
+   "Población (2019)": "8.470",
+   "Departamento": "Guairá"
+ },
+ {
+   "Puesto": "165",
+   "Municipio": "Caapucú",
+   "Población (2019)": "8.428",
+   "Departamento": "Paraguarí"
+ },
+ {
+   "Puesto": "166",
+   "Municipio": "Tavapy",
+   "Población (2019)": "8.394",
+   "Departamento": "Alto Paraná"
+ },
+ {
+   "Puesto": "167",
+   "Municipio": "General Delgado",
+   "Población (2019)": "8.007",
+   "Departamento": "Itapúa"
+ },
+ {
+   "Puesto": "168",
+   "Municipio": "Isla Pucú",
+   "Población (2019)": "7.969",
+   "Departamento": "Cordillera"
+ },
+ {
+   "Puesto": "169",
+   "Municipio": "Doctor Cecilio Báez",
+   "Población (2019)": "7.922",
+   "Departamento": "Caaguazú"
+ },
+ {
+   "Puesto": "170",
+   "Municipio": "Itapé",
+   "Población (2019)": "7.887",
+   "Departamento": "Guairá"
+ },
+ {
+   "Puesto": "171",
+   "Municipio": "Nueva Alborada",
+   "Población (2019)": "7.857",
+   "Departamento": "Itapúa"
+ },
+ {
+   "Puesto": "172",
+   "Municipio": "Zanja Pytá",
+   "Población (2019)": "7.767",
+   "Departamento": "Amambay"
+ },
+ {
+   "Puesto": "173",
+   "Municipio": "Quyquyhó",
+   "Población (2019)": "7.508",
+   "Departamento": "Paraguarí"
+ },
+ {
+   "Puesto": "174",
+   "Municipio": "Santa Rosa del Monday",
+   "Población (2019)": "7.444",
+   "Departamento": "Alto Paraná"
+ },
+ {
+   "Puesto": "175",
+   "Municipio": "Ybytymí",
+   "Población (2019)": "7.425",
+   "Departamento": "Paraguarí"
+ },
+ {
+   "Puesto": "176",
+   "Municipio": "General Bernardino Caballero",
+   "Población (2019)": "7.277",
+   "Departamento": "Paraguarí"
+ },
+ {
+   "Puesto": "177",
+   "Municipio": "Unión",
+   "Población (2019)": "7.117",
+   "Departamento": "San Pedro"
+ },
+ {
+   "Puesto": "178",
+   "Municipio": "Sargento José Félix López",
+   "Población (2019)": "7.083",
+   "Departamento": "Concepción"
+ },
+ {
+   "Puesto": "179",
+   "Municipio": "Mariscal Francisco Solano López",
+   "Población (2019)": "7.081",
+   "Departamento": "Caaguazú"
+ },
+ {
+   "Puesto": "180",
+   "Municipio": "Valenzuela",
+   "Población (2019)": "7.017",
+   "Departamento": "Cordillera"
+ },
+ {
+   "Puesto": "181",
+   "Municipio": "José A. Fassardi",
+   "Población (2019)": "6.957",
+   "Departamento": "Guairá"
+ },
+ {
+   "Puesto": "182",
+   "Municipio": "Fulgencio Yegros",
+   "Población (2019)": "6.902",
+   "Departamento": "Caazapá"
+ },
+ {
+   "Puesto": "183",
+   "Municipio": "Nueva Germania",
+   "Población (2019)": "6.892",
+   "Departamento": "San Pedro"
+ },
+ {
+   "Puesto": "184",
+   "Municipio": "Juan de Mena",
+   "Población (2019)": "6.881",
+   "Departamento": "Cordillera"
+ },
+ {
+   "Puesto": "185",
+   "Municipio": "Sapucai",
+   "Población (2019)": "6.816",
+   "Departamento": "Paraguarí"
+ },
+ {
+   "Puesto": "186",
+   "Municipio": "Coronel Martínez",
+   "Población (2019)": "6.800",
+   "Departamento": "Guairá"
+ },
+ {
+   "Puesto": "187",
+   "Municipio": "Primero de Marzo",
+   "Población (2019)": "6.755",
+   "Departamento": "Cordillera"
+ },
+ {
+   "Puesto": "188",
+   "Municipio": "Santiago",
+   "Población (2019)": "6.581",
+   "Departamento": "Misiones"
+ },
+ {
+   "Puesto": "189",
+   "Municipio": "Jesús",
+   "Población (2019)": "6.387",
+   "Departamento": "Itapúa"
+ },
+ {
+   "Puesto": "190",
+   "Municipio": "General Higinio Morínigo",
+   "Población (2019)": "6.314",
+   "Departamento": "Caazapá"
+ },
+ {
+   "Puesto": "191",
+   "Municipio": "Simón Bolívar",
+   "Población (2019)": "6.286",
+   "Departamento": "Caaguazú"
+ },
+ {
+   "Puesto": "192",
+   "Municipio": "Félix Pérez Cardozo",
+   "Población (2019)": "6.236",
+   "Departamento": "Guairá"
+ },
+ {
+   "Puesto": "193",
+   "Municipio": "Buena Vista",
+   "Población (2019)": "6.227",
+   "Departamento": "Caazapá"
+ },
+ {
+   "Puesto": "194",
+   "Municipio": "Iruña",
+   "Población (2019)": "6.208",
+   "Departamento": "Alto Paraná"
+ },
+ {
+   "Puesto": "195",
+   "Municipio": "Puerto Casado",
+   "Población (2019)": "6.202",
+   "Departamento": "Alto Paraguay"
+ },
+ {
+   "Puesto": "196",
+   "Municipio": "Naranjal",
+   "Población (2019)": "6.148",
+   "Departamento": "Alto Paraná"
+ },
+ {
+   "Puesto": "197",
+   "Municipio": "Nanawa",
+   "Población (2019)": "5.954",
+   "Departamento": "Presidente Hayes"
+ },
+ {
+   "Puesto": "198",
+   "Municipio": "San Miguel",
+   "Población (2019)": "5.949",
+   "Departamento": "Misiones"
+ },
+ {
+   "Puesto": "199",
+   "Municipio": "San Juan Bautista del Ñeembucú",
+   "Población (2019)": "5.903",
+   "Departamento": "Ñeembucú"
+ },
+ {
+   "Puesto": "200",
+   "Municipio": "Domingo Martínez de Irala",
+   "Población (2019)": "5.845",
+   "Departamento": "Alto Paraná"
+ },
+ {
+   "Puesto": "201",
+   "Municipio": "La Colmena",
+   "Población (2019)": "5.821",
+   "Departamento": "Paraguarí"
+ },
+ {
+   "Puesto": "202",
+   "Municipio": "Doctor Moisés Santiago Bertoni",
+   "Población (2019)": "5.770",
+   "Departamento": "Caazapá"
+ },
+ {
+   "Puesto": "203",
+   "Municipio": "Cerrito",
+   "Población (2019)": "5.662",
+   "Departamento": "Ñeembucú"
+ },
+ {
+   "Puesto": "204",
+   "Municipio": "San Alfredo",
+   "Población (2019)": "5.534",
+   "Departamento": "Concepción"
+ },
+ {
+   "Puesto": "205",
+   "Municipio": "La Pastora",
+   "Población (2019)": "5.328",
+   "Departamento": "Caaguazú"
+ },
+ {
+   "Puesto": "206",
+   "Municipio": "Santa Elena",
+   "Población (2019)": "5.168",
+   "Departamento": "Cordillera"
+ },
+ {
+   "Puesto": "207",
+   "Municipio": "Nueva Toledo",
+   "Población (2019)": "5.102",
+   "Departamento": "Caaguazú"
+ },
+ {
+   "Puesto": "208",
+   "Municipio": "Nueva Londres",
+   "Población (2019)": "5.020",
+   "Departamento": "Caaguazú"
+ },
+ {
+   "Puesto": "209",
+   "Municipio": "Natalicio Talavera",
+   "Población (2019)": "5.000",
+   "Departamento": "Guairá"
+ },
+ {
+   "Puesto": "210",
+   "Municipio": "Maciel",
+   "Población (2019)": "4.853",
+   "Departamento": "Caazapá"
+ },
+ {
+   "Puesto": "211",
+   "Municipio": "José Leandro Oviedo",
+   "Población (2019)": "4.852",
+   "Departamento": "Itapúa"
+ },
+ {
+   "Puesto": "212",
+   "Municipio": "Yataity del Guairá",
+   "Población (2019)": "4.800",
+   "Departamento": "Guairá"
+ },
+ {
+   "Puesto": "213",
+   "Municipio": "Tebicuarymí",
+   "Población (2019)": "4.607",
+   "Departamento": "Paraguarí"
+ },
+ {
+   "Puesto": "214",
+   "Municipio": "Karapaí",
+   "Población (2019)": "4.555",
+   "Departamento": "Amambay"
+ },
+ {
+   "Puesto": "215",
+   "Municipio": "Capitán Carmelo Peralta",
+   "Población (2019)": "4.479",
+   "Departamento": "Alto Paraguay"
+ },
+ {
+   "Puesto": "216",
+   "Municipio": "San José Obrero",
+   "Población (2019)": "4.377",
+   "Departamento": "Cordillera"
+ },
+ {
+   "Puesto": "217",
+   "Municipio": "Fuerte Olimpo",
+   "Población (2019)": "4.369",
+   "Departamento": "Alto Paraguay"
+ },
+ {
+   "Puesto": "218",
+   "Municipio": "Santa Fe del Paraná",
+   "Población (2019)": "4.331",
+   "Departamento": "Alto Paraná"
+ },
+ {
+   "Puesto": "219",
+   "Municipio": "Mayor José de Jesús Martínez",
+   "Población (2019)": "4.258",
+   "Departamento": "Ñeembucú"
+ },
+ {
+   "Puesto": "220",
+   "Municipio": "Antequera",
+   "Población (2019)": "4.232",
+   "Departamento": "San Pedro"
+ },
+ {
+   "Puesto": "221",
+   "Municipio": "Mbocayaty del Yhaguy",
+   "Población (2019)": "4.226",
+   "Departamento": "Cordillera"
+ },
+ {
+   "Puesto": "222",
+   "Municipio": "Paso Barreto",
+   "Población (2019)": "4.161",
+   "Departamento": "Concepción"
+ },
+ {
+   "Puesto": "223",
+   "Municipio": "José Falcón",
+   "Población (2019)": "4.142",
+   "Departamento": "Presidente Hayes"
+ },
+ {
+   "Puesto": "224",
+   "Municipio": "General José Eduvigis Díaz",
+   "Población (2019)": "4.032",
+   "Departamento": "Ñeembucú"
+ },
+ {
+   "Puesto": "225",
+   "Municipio": "Nueva Colombia",
+   "Población (2019)": "3.908",
+   "Departamento": "Cordillera"
+ },
+ {
+   "Puesto": "226",
+   "Municipio": "Tacuaras",
+   "Población (2019)": "3.902",
+   "Departamento": "Ñeembucú"
+ },
+ {
+   "Puesto": "227",
+   "Municipio": "Villa Oliva",
+   "Población (2019)": "3.791",
+   "Departamento": "Ñeembucú"
+ },
+ {
+   "Puesto": "228",
+   "Municipio": "San Patricio",
+   "Población (2019)": "3.735",
+   "Departamento": "Misiones"
+ },
+ {
+   "Puesto": "229",
+   "Municipio": "San Pablo",
+   "Población (2019)": "3.724",
+   "Departamento": "San Pedro"
+ },
+ {
+   "Puesto": "230",
+   "Municipio": "Villa Florida",
+   "Población (2019)": "3.570",
+   "Departamento": "Misiones"
+ },
+ {
+   "Puesto": "231",
+   "Municipio": "Loma Grande",
+   "Población (2019)": "3.531",
+   "Departamento": "Cordillera"
+ },
+ {
+   "Puesto": "232",
+   "Municipio": "Laureles",
+   "Población (2019)": "3.523",
+   "Departamento": "Ñeembucú"
+ },
+ {
+   "Puesto": "233",
+   "Municipio": "Ñumí",
+   "Población (2019)": "3.496",
+   "Departamento": "Guairá"
+ },
+ {
+   "Puesto": "234",
+   "Municipio": "Teniente Esteban Martínez",
+   "Población (2019)": "3.386",
+   "Departamento": "Presidente Hayes"
+ },
+ {
+   "Puesto": "235",
+   "Municipio": "La Paz",
+   "Población (2019)": "3.334",
+   "Departamento": "Itapúa"
+ },
+ {
+   "Puesto": "236",
+   "Municipio": "Itanará",
+   "Población (2019)": "3.320",
+   "Departamento": "Canindeyú"
+ },
+ {
+   "Puesto": "237",
+   "Municipio": "General José María Bruguez",
+   "Población (2019)": "3.281",
+   "Departamento": "Presidente Hayes"
+ },
+ {
+   "Puesto": "238",
+   "Municipio": "Tebicuary",
+   "Población (2019)": "3.151",
+   "Departamento": "Guairá"
+ },
+ {
+   "Puesto": "239",
+   "Municipio": "Humaitá",
+   "Población (2019)": "3.098",
+   "Departamento": "Ñeembucú"
+ },
+ {
+   "Puesto": "240",
+   "Municipio": "Isla Umbú",
+   "Población (2019)": "3.015",
+   "Departamento": "Ñeembucú"
+ },
+ {
+   "Puesto": "241",
+   "Municipio": "San Salvador",
+   "Población (2019)": "2.992",
+   "Departamento": "Guairá"
+ },
+ {
+   "Puesto": "242",
+   "Municipio": "Yabebyry",
+   "Población (2019)": "2.715",
+   "Departamento": "Misiones"
+ },
+ {
+   "Puesto": "243",
+   "Municipio": "Bahía Negra",
+   "Población (2019)": "2.498",
+   "Departamento": "Alto Paraguay"
+ },
+ {
+   "Puesto": "244",
+   "Municipio": "Villalbín",
+   "Población (2019)": "2.469",
+   "Departamento": "Ñeembucú"
+ },
+ {
+   "Puesto": "245",
+   "Municipio": "Guazú Cuá",
+   "Población (2019)": "2.186",
+   "Departamento": "Ñeembucú"
+ },
+ {
+   "Puesto": "246",
+   "Municipio": "Paso de Patria",
+   "Población (2019)": "2.123",
+   "Departamento": "Ñeembucú"
+ },
+ {
+   "Puesto": "247",
+   "Municipio": "Desmochados",
+   "Población (2019)": "1.794",
+   "Departamento": "Ñeembucú"
+ },
+ {
+   "Puesto": "248",
+   "Municipio": "Doctor Bottrell",
+   "Población (2019)": "1.722",
+   "Departamento": "Guairá"
+ },
+ {
+   "Puesto": "249",
+   "Municipio": "Villa Franca",
+   "Población (2019)": "1.368",
+   "Departamento": "Ñeembucú"
+ },
+ {
+   "Puesto": "250",
+   "Municipio": "San Carlos del Apa",
+   "Población (2019)": "747",
+   "Departamento": "Concepción"
+ },
+ {
+   "Puesto": "251",
+   "Municipio": "Maracaná",
+   "Población (2019)": "Sin datos oficiales",
+   "Departamento": "Canindeyú"
+ },
+ {
+   "Puesto": "252",
+   "Municipio": "María Antonia",
+   "Población (2019)": "Sin datos oficiales",
+   "Departamento": "Paraguarí"
+ },
+ {
+   "Puesto": "253",
+   "Municipio": "San Vicente Pancholo",
+   "Población (2019)": "Sin datos oficiales",
+   "Departamento": "San Pedro"
+ },
+ {
+   "Puesto": "254",
+   "Municipio": "Arroyito",
+   "Población (2019)": "Sin datos oficiales",
+   "Departamento": "Concepción"
+ },
+ {
+   "Puesto": "255",
+   "Municipio": "Puerto Adela",
+   "Población (2019)": "Sin datos oficiales",
+   "Departamento": "Canindeyú"
+ },
+ {
+   "Puesto": "256",
+   "Municipio": "Paso Horqueta",
+   "Población (2019)": "sin datos oficiales",
+   "Departamento": "20px Concepción"
+ },
+ {
+   "Puesto": "257",
+   "Municipio": "Cerro corá",
+   "Población (2019)": "sin datos oficiales",
+   "Departamento": "20px Amambay"
+ },
+ {
+   "Puesto": "258",
+   "Municipio": "Campo Aceval",
+   "Población (2019)": "sin datos oficiales",
+   "Departamento": "Presidente Hayes"
+ },
+ {
+   "Puesto": "259",
+   "Municipio": "Puerto Ybapovó",
+   "Población (2019)": "sin datos oficiales",
+   "Departamento": "20px San Pedro"
+ }
+]

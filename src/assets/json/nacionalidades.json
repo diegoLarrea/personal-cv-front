@@ -1,0 +1,352 @@
+[
+  {
+    "pais": "Paraguay",
+    "nacionalidad": "Paraguaya",
+    "idioma": "español"
+  },
+  {
+    "pais": "Argentina",
+    "nacionalidad": "Argentina",
+    "idioma": "español"
+  },
+  {
+    "pais": "Brasil",
+    "nacionalidad": "Brasileña",
+    "idioma": "portugués"
+  },
+  {
+    "pais": "Uruguay",
+    "nacionalidad": "Uruguaya",
+    "idioma": "español"
+  },
+  {
+    "pais": "Venezuela",
+    "nacionalidad": "Venezolana",
+    "idioma": "español"
+  },
+  {
+    "pais": "Bolivia",
+    "nacionalidad": "Boliviana",
+    "idioma": "español"
+  },
+  {
+    "pais": "Chile",
+    "nacionalidad": "Chilena",
+    "idioma": "español"
+  },
+  {
+    "pais": "Colombia",
+    "nacionalidad": "Colombiana",
+    "idioma": "español"
+  },
+  {
+    "pais": "Perú",
+    "nacionalidad": "Peruana",
+    "idioma": "español"
+  },
+  {
+    "pais": "Ecuador",
+    "nacionalidad": "Ecuatoriana",
+    "idioma": "español"
+  },
+  {
+    "pais": "Afganistán",
+    "nacionalidad": "Afgana",
+    "idioma": "afgano"
+  },
+  {
+    "pais": "Alemania",
+    "nacionalidad": "Alemana",
+    "idioma": "alemán"
+  },
+  {
+    "pais": "Arabia Saudita",
+    "nacionalidad": "Árabe",
+    "idioma": "árabe"
+  },
+  {
+    "pais": "Australia",
+    "nacionalidad": "Australiana",
+    "idioma": "inglés"
+  },
+  {
+    "pais": "Bélgica",
+    "nacionalidad": "Belga",
+    "idioma": "francés / flamenco"
+  },
+  {
+    "pais": "Camboya",
+    "nacionalidad": "Camboyana",
+    "idioma": "camboyano"
+  },
+  {
+    "pais": "Canadá",
+    "nacionalidad": "Canadiense",
+    "idioma": "inglés / francés"
+  },
+  {
+    "pais": "China",
+    "nacionalidad": "China",
+    "idioma": "chino"
+  },
+  {
+    "pais": "Corea",
+    "nacionalidad": "Coreana",
+    "idioma": "coreano"
+  },
+  {
+    "pais": "Costa Rica",
+    "nacionalidad": "Costarricense",
+    "idioma": "español"
+  },
+  {
+    "pais": "Cuba",
+    "nacionalidad": "Cubana",
+    "idioma": "español"
+  },
+  {
+    "pais": "Dinamarca",
+    "nacionalidad": "Danesa",
+    "idioma": "danés"
+  },
+  {
+    "pais": "Egipto",
+    "nacionalidad": "Egipcia",
+    "idioma": "árabe"
+  },
+  {
+    "pais": "El Salvador",
+    "nacionalidad": "Salvadoreña",
+    "idioma": "español"
+  },
+  {
+    "pais": "Escocia",
+    "nacionalidad": "Escocesa",
+    "idioma": "inglés"
+  },
+  {
+    "pais": "España",
+    "nacionalidad": "Española",
+    "idioma": "español"
+  },
+  {
+    "pais": "Estados Unidos",
+    "nacionalidad": "Estadounidense",
+    "idioma": "inglés"
+  },
+  {
+    "pais": "Estonia",
+    "nacionalidad": "Estonia",
+    "idioma": "estonio"
+  },
+  {
+    "pais": "Etiopia",
+    "nacionalidad": "Etiope",
+    "idioma": "amárico"
+  },
+  {
+    "pais": "Filipinas",
+    "nacionalidad": "Filipina",
+    "idioma": "tagalo"
+  },
+  {
+    "pais": "Finlandia",
+    "nacionalidad": "Finlandesa",
+    "idioma": "finlandés"
+  },
+  {
+    "pais": "Francia",
+    "nacionalidad": "Francesa",
+    "idioma": "francés"
+  },
+  {
+    "pais": "Gales",
+    "nacionalidad": "Galesa",
+    "idioma": "galés / inglés"
+  },
+  {
+    "pais": "Grecia",
+    "nacionalidad": "Griega",
+    "idioma": "griego"
+  },
+  {
+    "pais": "Guatemala",
+    "nacionalidad": "Guatemalteca",
+    "idioma": "español"
+  },
+  {
+    "pais": "Haití",
+    "nacionalidad": "Haitiana",
+    "idioma": "francés / creoles"
+  },
+  {
+    "pais": "Holanda",
+    "nacionalidad": "Holandesa",
+    "idioma": "holandés"
+  },
+  {
+    "pais": "Honduras",
+    "nacionalidad": "Hondureña",
+    "idioma": "español"
+  },
+  {
+    "pais": "Indonesia",
+    "nacionalidad": "Indonesa",
+    "idioma": "indonesio"
+  },
+  {
+    "pais": "Inglaterra",
+    "nacionalidad": "Inglesa",
+    "idioma": "inglés"
+  },
+  {
+    "pais": "Irak",
+    "nacionalidad": "Iraquí",
+    "idioma": "árabe"
+  },
+  {
+    "pais": "Irán",
+    "nacionalidad": "Iraní",
+    "idioma": "persa"
+  },
+  {
+    "pais": "Irlanda",
+    "nacionalidad": "Irlandesa",
+    "idioma": "irlandés / inglés"
+  },
+  {
+    "pais": "Israel",
+    "nacionalidad": "Israelí",
+    "idioma": "hebreo"
+  },
+  {
+    "pais": "Italia",
+    "nacionalidad": "Italiana",
+    "idioma": "italiano"
+  },
+  {
+    "pais": "Japón",
+    "nacionalidad": "Japonesa",
+    "idioma": "japonés"
+  },
+  {
+    "pais": "Jordania",
+    "nacionalidad": "Jordana",
+    "idioma": "árabe"
+  },
+  {
+    "pais": "Laos",
+    "nacionalidad": "Laosiana",
+    "idioma": "laosiano"
+  },
+  {
+    "pais": "Letonia",
+    "nacionalidad": "Letona",
+    "idioma": "letón"
+  },
+  {
+    "pais": "Lituania",
+    "nacionalidad": "Letonesa",
+    "idioma": "lituano"
+  },
+  {
+    "pais": "Malasia",
+    "nacionalidad": "Malaya",
+    "idioma": "malayo"
+  },
+  {
+    "pais": "Marruecos",
+    "nacionalidad": "Marroquí",
+    "idioma": "árabe / francés"
+  },
+  {
+    "pais": "México",
+    "nacionalidad": "Mexicana",
+    "idioma": "español"
+  },
+  {
+    "pais": "Nicaragua",
+    "nacionalidad": "Nicaragüense",
+    "idioma": "español"
+  },
+  {
+    "pais": "Noruega",
+    "nacionalidad": "Noruega",
+    "idioma": "noruego"
+  },
+  {
+    "pais": "Nueva Zelandia",
+    "nacionalidad": "Neozelandesa",
+    "idioma": "inglés / maori"
+  },
+  {
+    "pais": "Panamá",
+    "nacionalidad": "Panameña",
+    "idioma": "español"
+  },
+  {
+    "pais": "Polonia",
+    "nacionalidad": "Polaca",
+    "idioma": "polaco"
+  },
+  {
+    "pais": "Portugal",
+    "nacionalidad": "Portuguesa",
+    "idioma": "portugués"
+  },
+  {
+    "pais": "Puerto Rico",
+    "nacionalidad": "Puertorriqueña",
+    "idioma": "español"
+  },
+  {
+    "pais": "Republica Dominicana",
+    "nacionalidad": "Dominicana",
+    "idioma": "español"
+  },
+  {
+    "pais": "Rumania",
+    "nacionalidad": "Rumana",
+    "idioma": "rumano"
+  },
+  {
+    "pais": "Rusia",
+    "nacionalidad": "Rusa",
+    "idioma": "ruso"
+  },
+  {
+    "pais": "Suecia",
+    "nacionalidad": "Sueca",
+    "idioma": "sueco"
+  },
+  {
+    "pais": "Suiza",
+    "nacionalidad": "Suiza",
+    "idioma": "suizo"
+  },
+  {
+    "pais": "Tailandia",
+    "nacionalidad": "Tailandesa",
+    "idioma": "tailandés"
+  },
+  {
+    "pais": "Taiwán",
+    "nacionalidad": "Taiwanesa",
+    "idioma": "chino"
+  },
+  {
+    "pais": "Turquía",
+    "nacionalidad": "Turca",
+    "idioma": "turco"
+  },
+  {
+    "pais": "Ucrania",
+    "nacionalidad": "Ucraniana",
+    "idioma": "ucraniano"
+  },
+  {
+    "pais": "Vietnam",
+    "nacionalidad": "Vietnamita",
+    "idioma": "vietnamita"
+  }
+]
