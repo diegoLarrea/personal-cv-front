@@ -10,3 +10,14 @@
 .custom-control-input:checked ~ .custom-control-label.green::before {
   background-color: #00BBF9;
 }
+
+.image {
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+}
+
+.btn-foto {
+  width: 32px;
+  height: 32px;
+}

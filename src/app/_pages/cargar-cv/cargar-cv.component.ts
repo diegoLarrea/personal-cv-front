@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import Stepper from 'bs-stepper';
 
+declare var $:any;
 @Component({
   selector: 'app-cargar-cv',
   templateUrl: './cargar-cv.component.html',
@@ -16,9 +17,7 @@ export class CargarCvComponent implements OnInit {
     this.stepper = new Stepper(document.querySelector('.bs-stepper'), {
       linear: false
     });
+    $('#dCV').tooltip({ boundary: 'window' });
   }
 
-  next(){
-
-  }
 }

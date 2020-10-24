@@ -3,6 +3,18 @@
         <div class="col-12">
             <h3 class="text-primary font-weight-bolder">Datos personales</h3>
         </div>
+        <div class="col-12">
+            <div class="text-center">
+                <img src="{{persona.foto_perfil != null? persona.foto_perfil:'assets/img/user.png'}}" class="rounded-circle image">
+            </div>
+            <div class="text-center">
+                <input (change)="profileHandler($event.target.files)" type="file" id="foto-picker" class="d-none">
+                <button id="btn-s-f" (click)="profilePicker()" type="button" class="btn btn-primary my-2 mx-1 btn-sm rounded-circle btn-foto"
+                data-toggle="tooltip" data-placement="left" title="Seleccionar foto"><i class="fas fa-camera"></i></button>
+                <button id="btn-e-f" *ngIf="persona.foto_perfil != null" (click)="persona.foto_perfil=null;" type="button" 
+                class="btn btn-outline-info my-2 mx-1 btn-sm rounded-circle btn-foto" data-toggle="tooltip" data-placement="right" title="Eliminar foto"><i class="fas fa-trash-alt"></i></button>
+            </div>
+        </div>
         <div class="col-12 col-md-6 col-lg-4">
             <label for="">Documento</label>
             <div class="input-group mb-3">

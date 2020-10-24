@@ -29,6 +29,7 @@ export class DatosPersonalesComponent implements OnInit {
     this.getNacionalidades();
     this.getPersona();
     $('.collapse').collapse("hide");
+    $('#btn-s-f').tooltip({ boundary: 'window' });
   }
 
   getCiudades(){
@@ -61,6 +62,7 @@ export class DatosPersonalesComponent implements OnInit {
         }
 
         if(this.persona.ha_trabajado != null){
+          this.rt = true;
           this.pt = JSON.parse(this.persona.ha_trabajado);
           $("#showRt").collapse("show");
         }else{
@@ -69,6 +71,10 @@ export class DatosPersonalesComponent implements OnInit {
 
         if(this.persona.redes_sociales != null){
           this.rs = JSON.parse(this.persona.redes_sociales);
+        }
+        
+        if(this.persona.foto_perfil != null){
+          setTimeout(()=>{$('#btn-e-f').tooltip({ boundary: 'window' });},0)
         }
         this.ngxService.stop();
       }
@@ -134,25 +140,26 @@ export class DatosPersonalesComponent implements OnInit {
   }
 
   actualizarDatos(){
-    this.persona.usuario = this.persona.usuario.id;
+    let obj: Persona = Object.assign({}, this.persona);
+    obj.usuario = obj.usuario.id;
     if(this.rt){
-      this.persona.ha_trabajado = JSON.stringify(this.pt);
+      obj.ha_trabajado = JSON.stringify(this.pt);
     }
 
     if(this.rs){
-      this.persona.redes_sociales = JSON.stringify(this.rs);
+      obj.redes_sociales = JSON.stringify(this.rs);
     }
 
     if(this.rf){
-      this.persona.familiares = JSON.stringify(this.persona.familiares);
+      obj.familiares = JSON.stringify(obj.familiares);
     }else{
-      this.persona.familiares = null;
+      obj.familiares = null;
     }
     
-    if(this.validarPersona(this.persona, ["id", "fecha_creacion", "fecha_modificacion", "documento", 
+    if(this.validarPersona(obj, ["id", "fecha_creacion", "fecha_modificacion", "documento", 
     "cel_2", "telefono", "foto_perfil", "usuario", "familiares", "ha_trabajado", "redes_sociales"])){
       this.ngxService.start();
-      this.apiPersona.putPersonaByUser(this.persona).subscribe(
+      this.apiPersona.putPersonaByUser(obj).subscribe(
         data => {
           this.ngxService.stop();
           this.toast.success("Datos actualizados");
@@ -191,5 +198,31 @@ export class DatosPersonalesComponent implements OnInit {
 
   validarEmail(mail) {
     return /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/.test(mail);
+  }
+
+  // Foto de perfil
+  profilePicker(){
+    $("#foto-picker").trigger("click");
+  }
+
+  isFileImage(file) {
+    const acceptedImageTypes = ['image/gif', 'image/jpeg', 'image/png'];
+    return file && acceptedImageTypes.includes(file['type']);
+  }
+
+  toBase64 = file => new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = error => reject(error);
+  });
+
+  async profileHandler(files: FileList) {
+    if (files != null && this.isFileImage(files.item(0))) {
+      let file = files.item(0);
+      let file64 = await this.toBase64(file);
+      this.persona.foto_perfil = file64.toString();
+    }
+    $("#foto-picker").val(null);
   }
 }

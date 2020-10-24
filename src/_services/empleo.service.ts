@@ -11,10 +11,10 @@ export class EmpleoService {
     constructor(private http: HttpClient) { }
     
     getEmpleosHome():Observable<any>{    
-        return this.http.get(`${Host.api}/p-empleo/`);
+        return this.http.get(`${Host.api}/p-empleo/`,{headers:{skip:"true"}});
     }
 
     getEmpleo(id):Observable<any>{    
-        return this.http.get(`${Host.api}/p-empleo/${id}`);
+        return this.http.get(`${Host.api}/p-empleo/${id}`,{headers:{skip:"true"}});
     }
 }
