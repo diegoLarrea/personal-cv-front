@@ -3,7 +3,7 @@
 @import '~ngx-toastr/toastr-bs4-alert';
 $ng-select-highlight: #00BBF9 !default;
 @import "~@ng-select/ng-select/scss/default.theme";
-a {
+a, button {
     cursor: pointer !important;
 }
 

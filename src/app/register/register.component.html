@@ -1,1 +1,68 @@
-<p>register works!</p>
+<div class="row min-vh-100 bg-primary mx-0">
+    <div class="col-12 col-sm-10 col-md-6 my-auto mx-auto">
+        <div class="card border-0 p-0 my-3">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <h4 class="text-primary text-center font-weight-bolder">Registro - Personal CV</h4>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label style="font-size: 14px;" for="">Nombres</label>
+                        <div class="input-group input-group-sm mb-2">
+                            <input [(ngModel)]="obj.nombres" name="nombres" type="text" class="form-control" placeholder="Nombres...">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label style="font-size: 14px;" for="">Apellidos</label>
+                        <div class="input-group input-group-sm mb-2">
+                            <input [(ngModel)]="obj.apellidos" name="apellidos" type="text" class="form-control" placeholder="Apellidos...">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label style="font-size: 14px;" for="">Nro. Documento</label>
+                        <div class="input-group input-group-sm mb-2">
+                            <input [(ngModel)]="obj.documento" name="documento" type="number" class="form-control" placeholder="Nro. Documento...">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label style="font-size: 14px;" for="">Correo Electrónico</label>
+                        <div class="input-group input-group-sm mb-2">
+                            <input [(ngModel)]="obj.username" name="username" type="text" class="form-control" placeholder="Correo Electrónico...">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label style="font-size: 14px;" for="">Contraseña</label>
+                        <div class="input-group input-group-sm mb-2">
+                            <input [(ngModel)]="obj.password" name="password" type="password" class="form-control" placeholder="Contraseña...">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label style="font-size: 14px;" for="">Repetir contraseña</label>
+                        <div class="input-group input-group-sm mb-2">
+                            <input  [(ngModel)]="repeatPass" name="repeatPass" type="password" class="form-control" placeholder="Repetir contraseña...">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="w-100 text-center my-2">
+                            <re-captcha class="d-inline-block g-recaptcha" (resolved)="resolved($event)" siteKey="6LcaatsZAAAAACZiHVA-fFwjSKezo8SxFeeo-SAZ">
+                            </re-captcha>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button  [class.dis]="loading" type="button" (click)="register()"
+                            class="btn btn-sm btn-block btn-info w-50 mx-auto my-2"><i *ngIf="loading" class="fas fa-circle-notch fa-spin mr-2"></i>REGISTRARSE</button>
+                    </div>
+                    <div class="col-12">
+                        <hr>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button type="button" class="btn btn-outline-primary my-2" routerLink="/home"><i class="fas fa-arrow-left mr-2"></i>Ver empleos</button>
+                    </div>
+                    <div class="col-12 text-center text-black-50">
+                        ¿Ya tienes una cuenta? <a class="text-info" routerLink="/login">Ingresar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

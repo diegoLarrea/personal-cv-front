@@ -41,10 +41,30 @@ export class AuthService {
         return this.http.post(`${Host.api}/login/`,{
             username: usuario,
             password: pass
-        });
+        }, {headers:{skip:"true"}});
+    }
+
+    public captcha(body): Observable<any> {
+        return this.http.post(`${Host.api}/captcha/`, body, {headers:{skip:"true"}})
     }
 
     logout(){    
         localStorage.removeItem("token");
+    }
+
+    register(body):Observable<any>{    
+        return this.http.post(`${Host.api}/usuario-signup/`,body, {headers:{skip:"true"}});
+    }
+
+    activarCuenta(key):Observable<any>{    
+        return this.http.post(`${Host.api}/usuario-activar-cuenta/`,{key:key}, {headers:{skip:"true"}});
+    }
+
+    resetPass(key, pass):Observable<any>{    
+        return this.http.put(`${Host.api}/usuario-reset-pass/`,{key:key, password:pass}, {headers:{skip:"true"}});
+    }
+
+    solicitarResetPass(email):Observable<any>{    
+        return this.http.post(`${Host.api}/usuario-reset-pass/`,{email:email}, {headers:{skip:"true"}});
     }
 }

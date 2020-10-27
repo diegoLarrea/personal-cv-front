@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/_services/auth';
 
+declare var $:any;
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -30,11 +31,32 @@ export class LoginComponent implements OnInit {
         },
         error => {
           this.toast.info("Usuario y/o contraseña incorrecto/s");
+          this.loading = false;
         }
       )
     }else{
       this.toast.info("Complete los campos");
     }
     
+  }
+
+  emailReset = null;
+  loadingReset = false;
+  reset(){
+    this.loadingReset = true;
+    if(this.emailReset != null && this.emailReset != ""){
+      this.apiAuth.solicitarResetPass(this.emailReset).subscribe(
+        data => {
+          this.loadingReset = false;
+          this.toast.success("Se ha enviado un enlace a su correo");
+          $("#resetPassModal").modal("hide");
+        },
+        error => {
+          this.loadingReset = false;
+        }
+      )
+    }else{
+      this.toast.error("Ingrese correo electrónico");
+    }
   }
 }

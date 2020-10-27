@@ -26,6 +26,7 @@
     "bs-stepper": "^1.7.0",
     "hashids": "^2.2.1",
     "jquery": "^3.5.1",
+    "ng-recaptcha": "^6.0.2",
     "ngx-pagination": "^5.0.0",
     "ngx-toastr": "^13.1.0",
     "ngx-ui-loader": "^9.1.1",

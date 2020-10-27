@@ -1,0 +1,38 @@
+<nav class="navbar navbar-dark navbar-expand-md bg-primary">
+    <div class="navbar-brand">
+        <img routerLink="/home" src="assets/img/personal-blanco.png" style="width: 110px;height: auto;cursor: pointer;">
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6 offset-md-3">
+            <div class="card mt-4 shadow">
+                <div class="card-header q text-info">
+                    Restablecer contraseña
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-10 offset-1">
+                            <label for="">Nueva contraseña (+6 caracteres)</label>
+                            <div class="input-group mb-3">
+                                <input [(ngModel)]="pass" type="password" class="form-control"
+                                    placeholder="Ingrese contraseña...">
+                            </div>
+                        </div>
+                        <div class="col-10 offset-1">
+                            <label for="">Repetir nueva contraseña</label>
+                            <div class="input-group mb-4">
+                                <input [(ngModel)]="repeatPass" type="password" class="form-control"
+                                    placeholder="Repita contraseña...">
+                            </div>
+                        </div>
+                        <div class="col-10 offset-1 mb-4">
+                            <button (click)="reset()" type="button" class="btn btn-primary btn-block btn-sm">RESTABLECER</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ngx-ui-loader [text]="'Cambiando contraseña'" [loaderId]="'rp-loader'" [fgsType]="SPINNER.threeBounce" [pbColor]="'#00BBF9'" [fgsColor]="'#e83e8c'"></ngx-ui-loader>
