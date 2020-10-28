@@ -1,0 +1,76 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt-2">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a title="Página Principal" routerLink="/home"><i
+                                class="fas fa-home"></i></a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Perfil</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <div class="row" [hidden]="loading">
+        <div class="col-12">
+            <h2 class="text-info text-center d-none d-md-block mb-0">{{usuario.first_name + ' ' + usuario.last_name}}</h2>
+            <h4 class="text-info text-center d-md-none mb-0">{{usuario.first_name + ' ' + usuario.last_name}}</h4>
+            <p class="text-black-50 text-center q">Último acceso {{usuario.last_login}}</p>
+        </div>
+        <div class="col-12">
+            <div class="card shadow">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12 col-md-6" *ngIf="persona.fecha_nacimiento">
+                            <p class="info q">F. de Nac.: <span>{{persona.fecha_nacimiento}}</span></p>
+                        </div>
+                        <div class="col-12 col-md-6" *ngIf="persona.nacionalidad">
+                            <p class="info q">Nacionalidad: <span>{{persona.nacionalidad}}</span></p>
+                        </div>
+                        <div class="col-12 col-md-6" *ngIf="persona.estado_civil">
+                            <p class="info q">Estado Civil: <span>{{persona.estado_civil}}</span></p>
+                        </div>
+                        <div class="col-12 col-md-6" *ngIf="persona.ciudad_residencia">
+                            <p class="info q">Ciudad Residencia: <span>{{persona.ciudad_residencia}}</span></p>
+                        </div>
+                        <div class="col-12 col-md-6" *ngIf="persona.email">
+                            <p class="info q">Email: <span>{{persona.email}}</span></p>
+                        </div>
+                        <div class="col-12 col-md-6" *ngIf="persona.cel_1">
+                            <p class="info q">Celular: <span>{{persona.cel_1}}</span></p>
+                        </div>
+                        <div class="col-12">
+                            <h4 class="text-primary">Cambiar contraseña</h4>
+                            <hr>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <label for="">Contraseña Actual</label>
+                            <div class="input-group mb-3">
+                                <input [(ngModel)]="pass" type="password" class="form-control"
+                                    placeholder="Ingrese contraseña...">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <label for="">Contraseña Nueva (+6 caracteres)</label>
+                            <div class="input-group mb-3">
+                                <input [(ngModel)]="new_pass" type="password" class="form-control"
+                                    placeholder="Ingrese contraseña nueva...">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <label for="">Repetir contraseña nueva</label>
+                            <div class="input-group mb-3">
+                                <input [(ngModel)]="repeat_new_pass" type="password" class="form-control"
+                                    placeholder="Repita contraseña nueva...">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="text-center">
+                                <button (click)="cambiarPassword()" type="button" class="btn btn-primary">Cambiar contraseña</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

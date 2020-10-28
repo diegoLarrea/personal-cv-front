@@ -64,7 +64,15 @@ export class AuthService {
         return this.http.put(`${Host.api}/usuario-reset-pass/`,{key:key, password:pass}, {headers:{skip:"true"}});
     }
 
+    cambiarPass(pass, new_pass):Observable<any>{    
+        return this.http.put(`${Host.api}/usuario-cambiar-pass/`,{password:pass, new_password:new_pass});
+    }
+
     solicitarResetPass(email):Observable<any>{    
         return this.http.post(`${Host.api}/usuario-reset-pass/`,{email:email}, {headers:{skip:"true"}});
+    }
+
+    getCurrentUser():Observable<any>{    
+        return this.http.get(`${Host.api}/usuario-current/`);
     }
 }

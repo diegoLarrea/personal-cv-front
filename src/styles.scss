@@ -7,7 +7,7 @@ a, button {
     cursor: pointer !important;
 }
 
-h1, h2, h3, h4, h5, h6, a, label, button, .alert {
+h1, h2, h3, h4, h5, h6, a, label, button, .alert, th, td {
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -28,4 +28,10 @@ label {
 .dis {
     opacity: 0.75;
     pointer-events: none;
+}
+
+th {
+    color: #e83e8c;
+    font-weight: bolder;
+    border-bottom: 2px solid #e83e8c !important;
 }

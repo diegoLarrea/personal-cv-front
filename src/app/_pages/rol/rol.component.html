@@ -1,0 +1,163 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt-2">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a title="Página Principal" routerLink="/home"><i
+                                class="fas fa-home"></i></a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Roles</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <div class="row" [hidden]="loading">
+        <div class="col-12">
+            <h2 class="text-info d-none d-md-block mb-2">Roles ({{roles.length}})</h2>
+            <h4 class="text-info d-md-none mb-2">Roles ({{roles.length}})</h4>
+        </div>
+        <div class="col-12">
+            <button data-toggle="modal" data-target="#addRolModal" type="button" class="btn btn-primary mb-2"><i
+                    class="fas fa-plus mr-2"></i>AGREGAR ROL</button>
+        </div>
+        <div class="col-12">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th style="width:15%" scope="col" class="text-center">#</th>
+                        <th style="width:70%" scope="col">Nombre</th>
+                        <th style="width:15%" scope="col" class="text-center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr
+                        *ngFor="let i of roles | paginate: { id: 'server', itemsPerPage: 5, currentPage: p }; index as j;">
+                        <td class="text-center">{{j+1}}</td>
+                        <td>{{i.nombre}}</td>
+                        <td class="text-center">
+                            <a (click)="getPermisos(i)" data-toggle="modal" data-target="#permRolModal"
+                                title="Permisos" class="mx-1"><i class="fas fa-cog text-success"></i></a>
+                            <a (click)="openEditar(i)" data-toggle="modal" data-target="#editRolModal"
+                                title="Editar nombre" class="mx-1"><i class="fas fa-edit text-warning"></i></a>
+                            <a title="Eliminar rol" class="mx-1"><i class="fas fa-trash-alt text-danger"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <pagination-controls class="my-pagination text-center" id="server" (pageChange)="p=$event" maxSize="5"
+                previousLabel="" nextLabel="">
+            </pagination-controls>
+            <p *ngIf="roles.length == 0 && !loading" class="text-black-50 q text-center">No se encontraron resultados
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Add-->
+<div class="modal fade" id="addRolModal" tabindex="-1" aria-labelledby="addRolModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-info" id="addRolModalLabel">Agregar Rol</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <label for="">Nombre del rol</label>
+                        <div class="input-group mb-3">
+                            <input [(ngModel)]="rolAgregar" type="text" class="form-control"
+                                placeholder="Ingrese nombre del rol...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button (click)="post()" [class.dis]="rolAgregarLoading" type="button" class="btn btn-primary">
+                    <i *ngIf="rolAgregarLoading" class="fas fa-circle-notch fa-spin mr-2"></i>Guardar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal Edit-->
+<div class="modal fade" id="editRolModal" tabindex="-1" aria-labelledby="editRolModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-info" id="editRolModalLabel">Editar Rol</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <label for="">Nombre del rol</label>
+                        <div class="input-group mb-3">
+                            <input [(ngModel)]="rolEditar.nombre" type="text" class="form-control"
+                                placeholder="Ingrese nombre del rol...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button (click)="put()" [class.dis]="rolEditarLoading" type="button" class="btn btn-primary">
+                    <i *ngIf="rolEditarLoading" class="fas fa-circle-notch fa-spin mr-2"></i>Actualizar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Edit-->
+<div class="modal fade" id="permRolModal" tabindex="-1" aria-labelledby="permRolModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-info" id="permRolModalLabel">Permisos - {{rolPermisos.nombre}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row" [hidden]="!rolPermisosLoading">
+                    <div class="col-12">
+                        <div class="alert alert-primary" role="alert">
+                            <i class="fas fa-circle-notch fa-spin mr-2"></i>Cargando permisos...
+                        </div>
+                    </div>
+                </div>
+                <div class="row" [hidden]="rolPermisosLoading">
+                    <div class="col-12 col-md-6">
+                        <p class="text-black-50 font-weight-bolder q text-center">Permisos Disponibles ({{permisos_disponibles.length}})</p>
+                        <ul class="list-group">
+                            <li [class.dis]="i.click" *ngFor="let i of permisos_disponibles" class="list-group-item q">
+                                <button (click)="addPermiso(i.id);i.click=true;" type="button" class="btn btn-sm btn-primary rounded-circle float-right"><i class="fas fa-plus"></i></button>
+                                <i [hidden]="!i.click" class="fas fa-circle-notch fa-spin mr-2 text-info"></i>{{i.nombre_mostrar}}
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <p class="text-black-50 font-weight-bolder q text-center">Permisos Asignados ({{permisos_asignados.length}})</p>
+                        <ul class="list-group">
+                            
+                            <li [class.dis]="i.click" *ngFor="let i of permisos_asignados" class="list-group-item q">
+                                <button (click)="removePermiso(i.id);i.click=true;" type="button" class="btn btn-sm btn-info rounded-circle float-right"><i class="fas fa-minus"></i></button>
+                                <i [hidden]="!i.click" class="fas fa-circle-notch fa-spin mr-2 text-info"></i>{{i.nombre_mostrar}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Empleo } from 'src/_models/empleo';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/_services/auth';
-import { EmpleoService } from 'src/_services/empleo.service';
+
 declare var $: any;
 @Component({
   selector: 'app-pages',
@@ -11,7 +11,7 @@ declare var $: any;
 export class PagesComponent implements OnInit {
 
   user = null;
-  constructor(private apiAuth: AuthService) {
+  constructor(private apiAuth: AuthService, private router: Router) {
     this.user = apiAuth.getUser();
   }
 
@@ -32,6 +32,7 @@ export class PagesComponent implements OnInit {
   logOut(){
     this.apiAuth.logout();
     this.user = null;
+    this.router.navigateByUrl("/home");
   }
   
   sideBar = [
@@ -76,6 +77,13 @@ export class PagesComponent implements OnInit {
       perm: null,
       route: "/usuarios",
       icon: "fas fa-users mr-2"
+    },
+    {
+      nombre: "Roles",
+      active: false,
+      perm: null,
+      route: "/roles",
+      icon: "fas fa-user-cog mr-2"
     },
     {
       nombre: "Configuraciones",

@@ -24,6 +24,8 @@ import { IdiomasComponent } from './cargar-cv/idiomas/idiomas.component';
 import { ExperienciasComponent } from './cargar-cv/experiencias/experiencias.component';
 import { ReferenciasComponent } from './cargar-cv/referencias/referencias.component';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { PerfilComponent } from './perfil/perfil.component';
+import { RolComponent } from './rol/rol.component';
 
 
 @NgModule({
@@ -45,7 +47,9 @@ import { NgSelectModule } from '@ng-select/ng-select';
     EducacionComponent,
     IdiomasComponent,
     ExperienciasComponent,
-    ReferenciasComponent],
+    ReferenciasComponent,
+    PerfilComponent,
+    RolComponent],
 
   imports: [
     CommonModule,

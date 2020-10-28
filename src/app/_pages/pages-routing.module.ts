@@ -16,6 +16,8 @@ import { ListarUsuarioComponent } from './usuario/listar-usuario/listar-usuario.
 import { 
   AuthGuardService as AuthGuard 
 } from 'src/_services/guard';
+import { RolComponent } from './rol/rol.component';
+import { PerfilComponent } from './perfil/perfil.component';
 const routes: Routes = [
   {
     path: "",
@@ -34,6 +36,11 @@ const routes: Routes = [
       {
         path: "postulaciones",
         component: PostulacionComponent,
+        canActivate: [AuthGuard] 
+      },
+      {
+        path: "perfil",
+        component: PerfilComponent,
         canActivate: [AuthGuard] 
       },
       {
@@ -78,6 +85,11 @@ const routes: Routes = [
       {
         path: "configuraciones",
         component: ConfiguracionComponent,
+        canActivate: [AuthGuard] 
+      },
+      {
+        path: "roles",
+        component: RolComponent,
         canActivate: [AuthGuard] 
       }
     ] 
