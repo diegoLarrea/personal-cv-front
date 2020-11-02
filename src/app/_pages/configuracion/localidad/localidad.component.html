@@ -1,0 +1,146 @@
+<div class="container">
+    <div class="row" [hidden]="loading">
+        <div class="col-12">
+            <h2 class="text-info d-none d-md-block mb-2">Localidades ({{localidades.length}})</h2>
+            <h4 class="text-info d-md-none mb-2">Localidades ({{localidades.length}})</h4>
+        </div>
+        <div class="col-12">
+            <button data-toggle="modal" data-target="#addLocalidadModal" type="button" class="btn btn-primary mb-2"><i
+                    class="fas fa-plus mr-2"></i>AGREGAR LOCALIDAD</button>
+        </div>
+        <div class="col-12">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th style="width:15%" scope="col" class="text-center">#</th>
+                        <th style="width:30%" scope="col">Nombre</th>
+                        <th style="width:40%" scope="col">Dirección</th>
+                        <th style="width:15%" scope="col" class="text-center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr
+                        *ngFor="let i of localidades | paginate: { id: 'server', itemsPerPage: 10, currentPage: p }; index as j;">
+                        <td class="text-center">{{ (p - 1) * 10 + j + 1}}</td>
+                        <td>{{i.nombre}}</td>
+                        <td>{{i.direccion}}</td>
+                        <td class="text-center">
+                            <a (click)="openEditar(i)" data-toggle="modal" data-target="#editLocalidadModal"
+                                title="Editar nombre" class="mx-1"><i class="fas fa-edit text-warning"></i></a>
+                            <a (click)="openEliminar(i)" data-toggle="modal" data-target="#deleteLocalidadModal" title="Eliminar rol" class="mx-1"><i class="fas fa-trash-alt text-danger"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <pagination-controls class="my-pagination text-center" id="server" (pageChange)="p=$event" maxSize="5"
+                previousLabel="" nextLabel="">
+            </pagination-controls>
+            <p *ngIf="localidades.length == 0 && !loading" class="text-black-50 q text-center">No se encontraron resultados
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Add-->
+<div class="modal fade" id="addLocalidadModal" tabindex="-1" aria-labelledby="addLocalidadModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-info" id="addLocalidadModalLabel">Agregar Localidad</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <label for="">Nombre</label>
+                        <div class="input-group mb-3">
+                            <input [(ngModel)]="localidadAgregar.nombre" type="text" class="form-control"
+                                placeholder="Ingrese nombre de la localidad...">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <label for="">Dirección</label>
+                        <div class="input-group mb-3">
+                            <input [(ngModel)]="localidadAgregar.direccion" type="text" class="form-control"
+                                placeholder="Ingrese dirección de la localidad...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button (click)="post()" [class.dis]="localidadAgregarLoading" type="button" class="btn btn-primary">
+                    <i *ngIf="localidadAgregarLoading" class="fas fa-circle-notch fa-spin mr-2"></i>Guardar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal Edit-->
+<div class="modal fade" id="editLocalidadModal" tabindex="-1" aria-labelledby="editLocalidadModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-info" id="editLocalidadModalLabel">Editar Localidad</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <label for="">Nombre</label>
+                        <div class="input-group mb-3">
+                            <input [(ngModel)]="localidadEditar.nombre" type="text" class="form-control"
+                                placeholder="Ingrese nombre de la localidad...">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <label for="">Dirección</label>
+                        <div class="input-group mb-3">
+                            <input [(ngModel)]="localidadEditar.direccion" type="text" class="form-control"
+                                placeholder="Ingrese dirección de la localidad...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button (click)="put()" [class.dis]="localidadEditarLoading" type="button" class="btn btn-primary">
+                    <i *ngIf="localidadEditarLoading" class="fas fa-circle-notch fa-spin mr-2"></i>Actualizar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Delete-->
+<div class="modal fade" id="deleteLocalidadModal" tabindex="-1" aria-labelledby="deleteLocalidadModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-info" id="deleteLocalidadModalLabel">Eliminar Localidad</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-black-50 q">¿Desea eliminar la localidad?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button (click)="delete()" [class.dis]="localidadEliminarLoading" type="button" class="btn btn-primary">
+                    <i *ngIf="localidadEliminarLoading" class="fas fa-circle-notch fa-spin mr-2"></i>Eliminar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

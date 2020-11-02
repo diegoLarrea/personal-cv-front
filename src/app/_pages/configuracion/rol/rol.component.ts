@@ -81,6 +81,26 @@ export class RolComponent implements OnInit {
     }
   }
 
+  rolEliminar: Rol = new Rol();
+  rolEliminarLoading = false;
+  openEliminar(obj){
+    this.rolEliminar = Object.assign({}, obj);
+  }
+  delete(){
+    this.rolEliminarLoading = true;
+    this.apiRol.delete(this.rolEliminar.id).subscribe(
+      data => {
+        this.rolEliminarLoading = false;
+        $("#deleteRolModal").modal("hide");
+        this.rolEliminar = new Rol();
+        this.get();
+      },
+      error => {
+        this.rolEliminarLoading = false;
+      }
+    )
+  }
+
   rolPermisos: Rol = new Rol();
   rolPermisosLoading = false;
   permisos_asignados: any[] = [];

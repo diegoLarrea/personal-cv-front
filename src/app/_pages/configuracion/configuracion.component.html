@@ -10,4 +10,33 @@
             </nav>
         </div>
     </div>
+    <div class="row">
+        <div class="col-12">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link  active" href="#localidades" role="tab" data-toggle="tab"
+                        aria-selected="true">Localidades</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#areas" role="tab" data-toggle="tab">Áreas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#roles" role="tab" data-toggle="tab">Roles</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="localidades">
+                    <app-localidad></app-localidad>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="areas">
+                    <app-area></app-area>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="roles">
+                    <app-rol></app-rol>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

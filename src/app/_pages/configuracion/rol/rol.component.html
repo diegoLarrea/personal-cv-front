@@ -1,15 +1,4 @@
 <div class="container">
-    <div class="row">
-        <div class="col-12 mt-2">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a title="Página Principal" routerLink="/home"><i
-                                class="fas fa-home"></i></a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Roles</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
     <div class="row" [hidden]="loading">
         <div class="col-12">
             <h2 class="text-info d-none d-md-block mb-2">Roles ({{roles.length}})</h2>
@@ -30,15 +19,15 @@
                 </thead>
                 <tbody>
                     <tr
-                        *ngFor="let i of roles | paginate: { id: 'server', itemsPerPage: 5, currentPage: p }; index as j;">
-                        <td class="text-center">{{j+1}}</td>
+                        *ngFor="let i of roles | paginate: { id: 'server', itemsPerPage: 10, currentPage: p }; index as j;">
+                        <td class="text-center">{{ (p - 1) * 10 + j + 1}}</td>
                         <td>{{i.nombre}}</td>
                         <td class="text-center">
                             <a (click)="getPermisos(i)" data-toggle="modal" data-target="#permRolModal"
                                 title="Permisos" class="mx-1"><i class="fas fa-cog text-success"></i></a>
                             <a (click)="openEditar(i)" data-toggle="modal" data-target="#editRolModal"
                                 title="Editar nombre" class="mx-1"><i class="fas fa-edit text-warning"></i></a>
-                            <a title="Eliminar rol" class="mx-1"><i class="fas fa-trash-alt text-danger"></i></a>
+                            <a (click)="openEliminar(i)" data-toggle="modal" data-target="#deleteRolModal" title="Eliminar rol" class="mx-1"><i class="fas fa-trash-alt text-danger"></i></a>
                         </td>
                     </tr>
                 </tbody>
@@ -115,7 +104,7 @@
     </div>
 </div>
 
-<!-- Modal Edit-->
+<!-- Modal Permisos-->
 <div class="modal fade" id="permRolModal" tabindex="-1" aria-labelledby="permRolModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-scrollable">
         <div class="modal-content">
@@ -157,6 +146,33 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Delete-->
+<div class="modal fade" id="deleteRolModal" tabindex="-1" aria-labelledby="deleteRolModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-info" id="deleteRolModalLabel">Eliminar Rol</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-black-50 q">¿Desea eliminar el rol?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button (click)="delete()" [class.dis]="rolEliminarLoading" type="button" class="btn btn-primary">
+                    <i *ngIf="rolEliminarLoading" class="fas fa-circle-notch fa-spin mr-2"></i>Eliminar
+                </button>
             </div>
         </div>
     </div>

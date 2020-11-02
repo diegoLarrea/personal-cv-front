@@ -25,7 +25,9 @@ import { ExperienciasComponent } from './cargar-cv/experiencias/experiencias.com
 import { ReferenciasComponent } from './cargar-cv/referencias/referencias.component';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { PerfilComponent } from './perfil/perfil.component';
-import { RolComponent } from './rol/rol.component';
+import { RolComponent } from './configuracion/rol/rol.component';
+import { LocalidadComponent } from './configuracion/localidad/localidad.component';
+import { AreaComponent } from './configuracion/area/area.component';
 
 
 @NgModule({
@@ -49,7 +51,9 @@ import { RolComponent } from './rol/rol.component';
     ExperienciasComponent,
     ReferenciasComponent,
     PerfilComponent,
-    RolComponent],
+    RolComponent,
+    LocalidadComponent,
+    AreaComponent],
 
   imports: [
     CommonModule,

@@ -1,0 +1,130 @@
+<div class="container">
+    <div class="row" [hidden]="loading">
+        <div class="col-12">
+            <h2 class="text-info d-none d-md-block mb-2">Áreas ({{areas.length}})</h2>
+            <h4 class="text-info d-md-none mb-2">Áreas ({{areas.length}})</h4>
+        </div>
+        <div class="col-12">
+            <button data-toggle="modal" data-target="#addAreaModal" type="button" class="btn btn-primary mb-2"><i
+                    class="fas fa-plus mr-2"></i>AGREGAR ÁREA</button>
+        </div>
+        <div class="col-12">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th style="width:15%" scope="col" class="text-center">#</th>
+                        <th style="width:70%" scope="col">Nombre</th>
+                        <th style="width:15%" scope="col" class="text-center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr
+                        *ngFor="let i of areas | paginate: { id: 'server', itemsPerPage: 10, currentPage: p }; index as j;">
+                        <td class="text-center">{{ (p - 1) * 10 + j + 1}}</td>
+                        <td>{{i.nombre}}</td>
+                        <td class="text-center">
+                            <a (click)="openEditar(i)" data-toggle="modal" data-target="#editAreaModal"
+                                title="Editar nombre" class="mx-1"><i class="fas fa-edit text-warning"></i></a>
+                            <a (click)="openEliminar(i)" data-toggle="modal" data-target="#deleteAreaModal" title="Eliminar rol" class="mx-1"><i class="fas fa-trash-alt text-danger"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <pagination-controls class="my-pagination text-center" id="server" (pageChange)="p=$event" maxSize="5"
+                previousLabel="" nextLabel="">
+            </pagination-controls>
+            <p *ngIf="areas.length == 0 && !loading" class="text-black-50 q text-center">No se encontraron resultados
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Add-->
+<div class="modal fade" id="addAreaModal" tabindex="-1" aria-labelledby="addAreaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-info" id="addAreaModalLabel">Agregar Área</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <label for="">Nombre</label>
+                        <div class="input-group mb-3">
+                            <input [(ngModel)]="areaAgregar.nombre" type="text" class="form-control"
+                                placeholder="Ingrese nombre de la área...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button (click)="post()" [class.dis]="areaAgregarLoading" type="button" class="btn btn-primary">
+                    <i *ngIf="areaAgregarLoading" class="fas fa-circle-notch fa-spin mr-2"></i>Guardar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal Edit-->
+<div class="modal fade" id="editAreaModal" tabindex="-1" aria-labelledby="editAreaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-info" id="editAreaModalLabel">Editar Área</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <label for="">Nombre</label>
+                        <div class="input-group mb-3">
+                            <input [(ngModel)]="areaEditar.nombre" type="text" class="form-control"
+                                placeholder="Ingrese nombre de la localidad...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button (click)="put()" [class.dis]="areaEditarLoading" type="button" class="btn btn-primary">
+                    <i *ngIf="areaEditarLoading" class="fas fa-circle-notch fa-spin mr-2"></i>Actualizar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Delete-->
+<div class="modal fade" id="deleteAreaModal" tabindex="-1" aria-labelledby="deleteAreaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-info" id="deleteAreaModalLabel">Eliminar Área</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-black-50 q">¿Desea eliminar el área?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button (click)="delete()" [class.dis]="areaEliminarLoading" type="button" class="btn btn-primary">
+                    <i *ngIf="areaEliminarLoading" class="fas fa-circle-notch fa-spin mr-2"></i>Eliminar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
