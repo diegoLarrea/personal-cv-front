@@ -12,8 +12,13 @@ export class AuthService {
     constructor(public jwtHelper: JwtHelperService, private http: HttpClient, private router: Router) { }
     
     public isAuthenticated(): boolean {
-        const token = localStorage.getItem('token');
-        return !this.jwtHelper.isTokenExpired(token);
+        try {
+            const token = localStorage.getItem('token');
+            let result = !this.jwtHelper.isTokenExpired(token);
+            return result;
+        }catch(e){
+            return false;
+        }   
     }
 
     public getUser(): Object {

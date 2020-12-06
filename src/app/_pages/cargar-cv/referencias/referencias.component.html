@@ -1,7 +1,63 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <h3 class="text-primary font-weight-bolder">Referencias</h3>
+            <h3 class="text-primary font-weight-bolder">Referencias <span class="badge badge-secondary">{{referencia.length <= 1? 0:referencia.length - 1}} registro(s)</span></h3>
         </div>
+        <div class="col-12" *ngFor="let i of referencia; index as j;">
+            <div class="card shadow-sm my-2">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <label for="">Nombre <span class="text-primary">(</span>*<span class="text-primary">)</span></label>
+                            <div class="input-group input-group-sm mb-2">
+                                <input [(ngModel)]="i.nombre" name="nombre-{{j}}" type="text" class="form-control" placeholder="Nombre...">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <label for="">Parentesco <span class="text-primary">(</span>*<span class="text-primary">)</span></label>
+                            <div class="input-group input-group-sm mb-2">
+                                <input [(ngModel)]="i.parentesco" name="parentesco-{{j}}" type="text" class="form-control" placeholder="Parentesco...">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <label for="">Contacto <span class="text-primary">(</span>*<span class="text-primary">)</span></label>
+                            <div class="input-group input-group-sm mb-2">
+                                <input [(ngModel)]="i.contacto" name="contacto-{{j}}" type="text" class="form-control" placeholder="Contacto...">
+                            </div>
+                        </div>
+                        <div class="col-12 text-center text-md-right">
+                            <button (click)="post(j)" *ngIf="i.id == null" type="button" class="btn btn-primary btn-sm m-1"><i class="fas fa-plus mr-2"></i>Guardar</button>
+                            <button (click)="put(j)" *ngIf="i.id != null" type="button" class="btn btn-info btn-sm m-1"><i class="fas fa-edit mr-2"></i>Actualizar</button>
+                            <button (click)="deleteTargetPosition=j;" data-toggle="modal" data-target="#eliminarIdio" *ngIf="i.id != null" type="button" class="btn btn-outline-secondary btn-sm m-1"><i class="fas fa-trash-alt mr-2"></i>Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-muted q" *ngIf="i.id != null">
+                    <div class="text-right">
+                        <i class="fas fa-edit mr-2"></i> {{i.fecha_modificacion}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="eliminarIdio" tabindex="-1" aria-labelledby="eliminarIdioLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-info" id="eliminarIdioLabel">Eliminar Registro</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h6 class="text-black-50">¿Estás seguro(a)?</h6>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button data-dismiss="modal" (click)="delete()" type="button" class="btn btn-primary">Eliminar</button>
+        </div>
+      </div>
     </div>
 </div>

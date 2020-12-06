@@ -1,7 +1,122 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <h3 class="text-primary font-weight-bolder">Experiencias</h3>
+            <h3 class="text-primary font-weight-bolder">Experiencias <span class="badge badge-secondary">{{experiencia.length <= 1? 0:experiencia.length - 1}} registro(s)</span></h3>
         </div>
+        <div class="col-12" *ngFor="let i of experiencia; index as j;">
+            <div class="card shadow-sm my-2">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <label for="">Institución <span class="text-primary">(</span>*<span class="text-primary">)</span></label>
+                            <div class="input-group input-group-sm mb-2">
+                                <input [(ngModel)]="i.institucion" name="institucion-{{j}}" type="text" class="form-control" placeholder="Institución...">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="">Puesto <span class="text-primary">(</span>*<span class="text-primary">)</span></label>
+                            <div class="input-group input-group-sm mb-2">
+                                <input [(ngModel)]="i.puesto" name="puesto-{{j}}" type="text" class="form-control" placeholder="Título...">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <label for="">Rubro <span class="text-primary">(</span>*<span class="text-primary">)</span></label>
+                            <div class="input-group input-group-sm mb-2">
+                                <select [(ngModel)]="i.rubro" name="rubro-{{j}}" class="custom-select">
+                                    <option *ngFor="let i of rubros" value="{{i}}">{{i}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <label for="">Trabajando actualmente? <span class="text-primary">(</span>*<span class="text-primary">)</span></label>
+                            <div class="input-group input-group-sm mb-2">
+                                <select (change)="i.trabajando?i.hasta=null:null" [(ngModel)]="i.trabajando" name="trabajando-{{j}}" class="custom-select">
+                                    <option [value]="true">SI</option>
+                                    <option [value]="false">NO</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <label for="">Desde <span class="text-primary">(</span>*<span class="text-primary">)</span></label>
+                            <div class="input-group input-group-sm mb-2">
+                                <input [(ngModel)]="i.desde" name="desde-{{j}}" type="text" class="form-control" placeholder="Desde...">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <label for="">Hasta</label>
+                            <div class="input-group input-group-sm mb-2">
+                                <input [disabled]="i.trabajando" [(ngModel)]="i.hasta" name="hasta-{{j}}" type="text" class="form-control" placeholder="Hasta...">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="">Tareas realizadas</label>
+                            <div class="input-group input-group-sm mb-2">
+                                <textarea class="form-control" [(ngModel)]="i.tareas" name="tarea-{{j}}"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <label for="">Superior Nombre <span class="text-primary">(</span>*<span class="text-primary">)</span></label>
+                            <div class="input-group input-group-sm mb-2">
+                                <input [(ngModel)]="i.sup_nombre" name="pais-{{j}}" type="text" class="form-control" placeholder="Sup. Nombre...">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <label for="">Superior Puesto <span class="text-primary">(</span>*<span class="text-primary">)</span></label>
+                            <div class="input-group input-group-sm mb-2">
+                                <input [(ngModel)]="i.sup_puesto" name="pais-{{j}}" type="text" class="form-control" placeholder="Sup. Puesto...">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <label for="">Superior Contacto <span class="text-primary">(</span>*<span class="text-primary">)</span></label>
+                            <div class="input-group input-group-sm mb-2">
+                                <input [(ngModel)]="i.sup_contacto" name="pais-{{j}}" type="text" class="form-control" placeholder="Sup. Contacto...">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <label for="">Archivo (PDF/Imagen, Máx.: 2MB)</label>
+                            <div class="input-group input-group-sm mb-2">
+                                <input (change)="fileHandler($event.target.files, j)" type="file" class="d-none" id="ifexp-{{j}}">
+                                <div class="input-group-prepend" id="bfexp-{{j}}">
+                                  <button (click)="filePicker(j)" class="btn btn-outline-secondary" type="button" >Seleccionar</button>
+                                  <button *ngIf="i.documento != null" (click)="i.documento=null;" class="btn btn-info" type="button"><i class="fas fa-trash-alt"></i></button>
+                                  <button *ngIf="i.documento != null" (click)="download(j)" class="btn btn-primary" type="button"><i class="fas fa-download"></i></button>
+                                </div>
+                                <input value={{i.documento?.nombre}} readonly type="text" class="form-control" placeholder="" attr.aria-describedby="bfexp-{{j}}">
+                            </div>
+                        </div>
+                        <div class="col-12 text-center text-md-right">
+                            <button (click)="post(j)" *ngIf="i.id == null" type="button" class="btn btn-primary btn-sm m-1"><i class="fas fa-plus mr-2"></i>Guardar</button>
+                            <button (click)="put(j)" *ngIf="i.id != null" type="button" class="btn btn-info btn-sm m-1"><i class="fas fa-edit mr-2"></i>Actualizar</button>
+                            <button (click)="deleteTargetPosition=j;" data-toggle="modal" data-target="#eliminarexp" *ngIf="i.id != null" type="button" class="btn btn-outline-secondary btn-sm m-1"><i class="fas fa-trash-alt mr-2"></i>Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-muted q" *ngIf="i.id != null">
+                    <div class="text-right">
+                        <i class="fas fa-edit mr-2"></i> {{i.fecha_modificacion}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="eliminarexp" tabindex="-1" aria-labelledby="eliminarexpLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-info" id="eliminarexpLabel">Eliminar Registro</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h6 class="text-black-50">¿Estás seguro(a)?</h6>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button data-dismiss="modal" (click)="delete()" type="button" class="btn btn-primary">Eliminar</button>
+        </div>
+      </div>
     </div>
 </div>

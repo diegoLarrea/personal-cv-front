@@ -16,8 +16,7 @@ export class HomePipe implements PipeTransform{
             return it.oportunidad.toLowerCase().includes(searchText) ||
             it.id.toLowerCase().includes(searchText) ||
             it.localidad.nombre.toLowerCase().includes(searchText) ||
-            it.localidad.direccion.toLowerCase().includes(searchText) ||
-            it.area.nombre.toLowerCase().includes(searchText);
+            it.localidad.direccion.toLowerCase().includes(searchText);
         });
 
     }
